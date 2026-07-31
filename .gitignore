@@ -1,0 +1,38 @@
+
+__pycache__/
+!.env.example
+!phase1-golden-slice/artifacts/.gitkeep
+!phase1-golden-slice/reports/.gitkeep
+.DS_Store
+.env
+.env.*
+.idea/
+.mypy_cache/
+.pytest_cache/
+.venv/
+.vscode/
+*.bin
+*.gguf
+*.key
+*.pem
+*.py[cod]
+*.pyc
+*.swp
+**/__pycache__/
+**/secrets/
+# Lab run outputs (keep folder structure)
+# Large local models (never ship)
+# local run noise
+# Optional local Ollama dumps
+# OS / editor
+# Python
+# Secrets & local env
+credentials.json
+models/
+ollama-data/
+phase1-golden-slice/**/__pycache__/
+phase1-golden-slice/artifacts/*
+phase1-golden-slice/reports/*
+venv/
+!phase1-golden-slice/artifacts/.gitkeep
+!phase1-golden-slice/reports/.gitkeep

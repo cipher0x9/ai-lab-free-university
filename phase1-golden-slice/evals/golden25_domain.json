@@ -1,0 +1,33 @@
+{
+  "suite": "ai-lab-free-university/phase1-golden25-domain",
+  "version": "1.0.0",
+  "description": "Expanded general-audience suite (includes Phase-1 gold + domain operator items). Optional deeper bar.",
+  "pass_threshold": 0.8,
+  "items": [
+    {"id": "D01", "question": "What does RTMA stand for?", "required_keywords": ["run", "trace", "metric", "artifact"], "reference_answer": "Run Trace Metric Artifact", "category": "grammar"},
+    {"id": "D02", "question": "What UC grammar maps to RTMA?", "required_keywords": ["licc"], "reference_answer": "LICC", "category": "uc-bridge"},
+    {"id": "D03", "question": "Define token simply.", "required_keywords": ["chunk"], "reference_answer": "A chunk of text", "category": "mental-model"},
+    {"id": "D04", "question": "Define hallucination here.", "required_keywords": ["fluent", "evidence"], "reference_answer": "Fluent ungrounded answer", "category": "safety"},
+    {"id": "D05", "question": "Why tool calls for math?", "required_keywords": ["schema", "exact"], "reference_answer": "Schema + exact results", "category": "tools"},
+    {"id": "D06", "question": "Ollama default port?", "required_keywords": ["11434"], "reference_answer": "11434", "category": "local-lab"},
+    {"id": "D07", "question": "Name a free-pack non-goal involving HTML size.", "required_keywords": ["760"], "reference_answer": "Not 760MB HTML", "category": "shipping"},
+    {"id": "D08", "question": "What never goes in public git regarding credentials?", "required_keywords": ["keys"], "reference_answer": "API keys", "category": "safety"},
+    {"id": "D09", "question": "Planned public repo name?", "required_keywords": ["ai-lab-free-university"], "reference_answer": "ai-lab-free-university", "category": "shipping"},
+    {"id": "D10", "question": "Phase-1 path four words/steps?", "required_keywords": ["hello", "tool", "eval", "green"], "reference_answer": "hello tool eval green", "category": "path"},
+    {"id": "D11", "question": "What is a context window?", "required_keywords": ["token", "budget"], "reference_answer": "Token budget for one request", "category": "mental-model"},
+    {"id": "D12", "question": "Name one never-without-approval action.", "required_keywords": ["email"], "reference_answer": "Send email without approval", "category": "agents"},
+    {"id": "D13", "question": "What does RAG retrieve before answering?", "required_keywords": ["document"], "reference_answer": "Relevant documents", "category": "rag"},
+    {"id": "D14", "question": "What should RAG answers include?", "required_keywords": ["citation"], "reference_answer": "Citations", "category": "rag"},
+    {"id": "D15", "question": "Lower temperature is more…?", "required_keywords": ["deterministic"], "reference_answer": "Deterministic", "category": "mental-model"},
+    {"id": "D16", "question": "What is prompt injection?", "required_keywords": ["override"], "reference_answer": "Hostile text tries to override instructions", "category": "safety"},
+    {"id": "D17", "question": "Local models help most with which default risk vs cloud?", "required_keywords": ["privacy"], "reference_answer": "Privacy", "category": "local-lab"},
+    {"id": "D18", "question": "Name the free pack license used here.", "required_keywords": ["mit"], "reference_answer": "MIT", "category": "shipping"},
+    {"id": "D19", "question": "What backend name means no real model server?", "required_keywords": ["mock"], "reference_answer": "mock", "category": "honesty"},
+    {"id": "D20", "question": "Golden-10 default pass threshold percent word?", "required_keywords": ["80"], "reference_answer": "80%", "category": "evals"},
+    {"id": "D21", "question": "Voice AI latency budgets should include STT and…?", "required_keywords": ["tts"], "reference_answer": "TTS", "category": "voice"},
+    {"id": "D22", "question": "Ship default HTML size budget upper bound in MB?", "required_keywords": ["20"], "reference_answer": "20 MB", "category": "shipping"},
+    {"id": "D23", "question": "An agent is a loop with…?", "required_keywords": ["privileges"], "reference_answer": "Privileges", "category": "agents"},
+    {"id": "D24", "question": "What falsifier question do we ask before 'model is smart enough'?", "required_keywords": ["observation"], "reference_answer": "What observation would kill the claim?", "category": "grammar"},
+    {"id": "D25", "question": "Sibling free UC pack short name?", "required_keywords": ["uc lab"], "reference_answer": "UC Lab Free University", "category": "siblings"}
+  ]
+}

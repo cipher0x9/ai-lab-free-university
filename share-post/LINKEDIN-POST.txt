@@ -1,0 +1,23 @@
+I published a free offline AI learning pack I built while learning.
+
+AI Lab Free University
+From confused builder → confident local + cloud AI operator.
+
+What you get (free):
+• Beautiful offline campus (open one HTML file)
+• Multi-level curriculum + themes
+• Runnable labs (no API keys to start)
+• RTMA evidence habit: Run · Trace · Metric · Artifact
+• 1000+ curated public resource links
+
+I’m not an AI native — I’m a long-time Cisco/UC engineer learning AI the operator way.
+Sibling free pack (UC/voice): already public as UC Lab Free University.
+
+Educational only · MIT · no warranty · lab safely
+
+GitHub:
+https://github.com/cipher0x9/ai-lab-free-university
+
+If it helps you, share it with one friend who’s learning too.
+
+#AI #LearningInPublic #OpenSource #MacMini #Agents #LocalLLM

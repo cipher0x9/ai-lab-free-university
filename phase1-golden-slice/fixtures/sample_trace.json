@@ -1,0 +1,24 @@
+{
+  "schema": "ai-lab-free-university/rtma/v1",
+  "lab": "fixture_example",
+  "run_id": "fixture-example-0001",
+  "status": "ok",
+  "run": {
+    "command": "python3 lab/02_tool_call.py",
+    "note": "Example only — real runs land in artifacts/"
+  },
+  "trace": [
+    {"event": "user_goal", "text": "Calculate 12*(3+4)/2 and define RTMA"},
+    {"event": "tool_request", "name": "calc", "arguments": {"expression": "12*(3+4)/2"}},
+    {"event": "tool_result", "name": "calc", "result": {"ok": true, "result": 42.0}},
+    {"event": "tool_request", "name": "glossary_lookup", "arguments": {"term": "RTMA"}},
+    {"event": "tool_result", "name": "glossary_lookup", "result": {"ok": true}}
+  ],
+  "metric": {
+    "elapsed_ms": 42,
+    "tool_call_count": 2,
+    "successful_tools": 2
+  },
+  "artifact": ["artifacts/fixture-example-0001.json"],
+  "falsifier": "If tool chain is missing, do not claim the agent is reliable."
+}

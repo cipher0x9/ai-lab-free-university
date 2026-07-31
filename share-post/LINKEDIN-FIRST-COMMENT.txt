@@ -1,0 +1,13 @@
+Free pack map:
+
+1) Open university/v2-UNIVERSITY.html offline (themes + search + mark studied)
+2) bash scripts/verify_slice.sh  → labs + 10-question eval (no API keys)
+3) RTMA = Run · Trace · Metric · Artifact (AI twin of UC LICC)
+
+Sibling UC free university:
+https://github.com/cipher0x9/uc-lab-free-university
+
+Linktree:
+https://linktr.ee/cyphermonkey
+
+When the AI public repo/release is live, this comment gets the GitHub + zip links.

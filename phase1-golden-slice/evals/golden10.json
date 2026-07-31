@@ -1,0 +1,79 @@
+{
+  "suite": "ai-lab-free-university/phase1-golden10",
+  "version": "1.0.0",
+  "description": "Ten fixed questions for the Phase-1 vertical slice. Score with evidence, not vibes.",
+  "pass_threshold": 0.8,
+  "scoring": "keyword_all_required (case-insensitive). Optional freeform notes allowed.",
+  "items": [
+    {
+      "id": "Q01",
+      "question": "What does RTMA stand for?",
+      "required_keywords": ["run", "trace", "metric", "artifact"],
+      "reference_answer": "Run · Trace · Metric · Artifact — the evidence habit for AI labs.",
+      "category": "grammar"
+    },
+    {
+      "id": "Q02",
+      "question": "Which UC troubleshooting grammar does RTMA mirror?",
+      "required_keywords": ["licc"],
+      "reference_answer": "LICC — Leg · ID · Counter · Capture.",
+      "category": "uc-bridge"
+    },
+    {
+      "id": "Q03",
+      "question": "What is a token in LLM systems (simple definition)?",
+      "required_keywords": ["chunk"],
+      "reference_answer": "A token is a chunk of text the model reads or writes — not always a full word.",
+      "category": "mental-model"
+    },
+    {
+      "id": "Q04",
+      "question": "What is a hallucination in this lab’s language?",
+      "required_keywords": ["fluent", "evidence"],
+      "reference_answer": "A fluent answer that is not grounded in evidence.",
+      "category": "safety"
+    },
+    {
+      "id": "Q05",
+      "question": "Why use a tool call instead of letting the model invent a calculation?",
+      "required_keywords": ["schema", "exact"],
+      "reference_answer": "Tool calls use a schema and return exact results instead of invented numbers.",
+      "category": "tools"
+    },
+    {
+      "id": "Q06",
+      "question": "What is the default local host:port pattern for Ollama?",
+      "required_keywords": ["11434"],
+      "reference_answer": "http://127.0.0.1:11434 (localhost port 11434).",
+      "category": "local-lab"
+    },
+    {
+      "id": "Q07",
+      "question": "Name one non-goal of the first AI free pack.",
+      "required_keywords": ["760"],
+      "reference_answer": "Not a 760MB single HTML (browser-hostile mega files).",
+      "category": "shipping"
+    },
+    {
+      "id": "Q08",
+      "question": "What must never go into the public git repo?",
+      "required_keywords": ["keys"],
+      "reference_answer": "API keys / secrets (also customer data and private chats).",
+      "category": "safety"
+    },
+    {
+      "id": "Q09",
+      "question": "What is the suggested future public GitHub repo name for this pack?",
+      "required_keywords": ["ai-lab-free-university"],
+      "reference_answer": "ai-lab-free-university",
+      "category": "shipping"
+    },
+    {
+      "id": "Q10",
+      "question": "What is the Phase-1 golden path in four steps?",
+      "required_keywords": ["hello", "tool", "eval", "green"],
+      "reference_answer": "local hello → tool call → eval of 10 questions → GREEN pack.",
+      "category": "path"
+    }
+  ]
+}

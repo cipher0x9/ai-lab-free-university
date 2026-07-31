@@ -1,0 +1,114 @@
+# AI Lab Free University
+
+**Free for everyone.** Offline-friendly AI university I built **while learning** — so others can learn with less noise.
+
+> From confused builder → confident local + cloud AI operator  
+> Evidence-first · free share · Mac Mini ready · beautiful offline campus
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![Educational](https://img.shields.io/badge/educational-only-green.svg)](#safety)
+
+---
+
+## Download (easiest)
+
+### Main free pack (recommended)
+
+**→ [Download v4-PORTFOLIO.html.zip](https://github.com/cipher0x9/ai-lab-free-university/releases/latest)**  
+*(after first Release is published — also in [`zips/v4-PORTFOLIO.html.zip`](./zips/v4-PORTFOLIO.html.zip))*
+
+1. Download the zip  
+2. Unzip  
+3. Open **`v4-PORTFOLIO.html`** in Chrome / Safari / Edge / Firefox  
+
+**Default theme:** Aurora Dream (recommended). Switch themes anytime in the header.
+
+No account. No install for reading. Works offline after download.
+
+---
+
+## Why I shared this
+
+I’m **cipher0x9 / CYPHER0X9** — ~10 years Cisco / Unified Communications, now an AI learner-builder.
+
+I already published a free UC pack for voice engineers:
+
+**https://github.com/cipher0x9/uc-lab-free-university**
+
+This AI pack is the **sibling**: same free-share discipline, mentor tone, and proof habits — applied to local models, tools, agents, evals, Hermes, and future stack foresight.
+
+If this helps **even one person**, it was worth sharing.
+
+---
+
+## What’s inside
+
+| Path | What |
+|------|------|
+| `university/v4-PORTFOLIO.html` | **Main campus** — full-page portfolio UI, themes, 425 lessons, 1000+ links |
+| `university/v3-LIFETIME.html` | Lifetime multi-level campus |
+| `university/v1-SLICE.html` | Compact Phase-1 walkthrough |
+| `phase1-golden-slice/` | Runnable labs + evals + RTMA artifacts |
+| `curriculum/` | Source of truth (taxonomy + generators) |
+| `schools/` | Markdown mentor modules |
+| `zips/` | Ready-to-share zip files |
+| `share-post/` | Gentle post drafts for sharing |
+
+### Teaching grammar: RTMA
+
+**Run · Trace · Metric · Artifact**  
+(the AI twin of UC **LICC**: Leg · ID · Counter · Capture)
+
+Falsifier first. Permissions are perimeter.
+
+---
+
+## Runnable labs (optional, still free)
+
+Needs **Python 3 only**. **No API keys** for Phase 1.
+
+```bash
+bash scripts/verify_slice.sh
+```
+
+Path: local hello → tool call → golden evals → rebuild HTML size check.
+
+If Ollama isn’t installed, labs use an **honest mock brain** so learning never blocks.
+
+---
+
+## Rebuild campus (contributors)
+
+```bash
+python3 scripts/build_university_v4.py
+```
+
+---
+
+## Safety
+
+Educational only — **no warranty**.  
+Never commit API keys, customer data, or private chats.  
+No autonomous email/post without human approval.  
+Lab safely. Pin official vendor docs for production.
+
+See [SECURITY.md](./SECURITY.md) · [CONTRIBUTING.md](./CONTRIBUTING.md) · [DOWNLOADS.md](./DOWNLOADS.md)
+
+---
+
+## Links
+
+| | |
+|--|--|
+| **This repo** | https://github.com/cipher0x9/ai-lab-free-university |
+| **Sibling UC free pack** | https://github.com/cipher0x9/uc-lab-free-university |
+| **Profile** | https://github.com/cipher0x9 |
+| **Linktree** | https://linktr.ee/cyphermonkey |
+
+---
+
+## License
+
+MIT · [@cipher0x9](https://github.com/cipher0x9)
+
+Learning in public. Sharing the map I wish I had.

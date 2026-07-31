@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="night">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta name="description" content="AI Lab Free University v1 Slice — offline Phase-1 pack. RTMA · local lab · tools · evals."/>
+<meta name="color-scheme" content="light dark"/>
+<title>AI Lab Free University v1 — Golden Slice</title>
+<style>
+:root{
+  --bg:#0b1020;--card:#141b2f;--ink:#E8EEF9;--muted:#8B9BB8;--line:#243049;--border:#2a3654;
+  --a1:#38BDF8;--a2:#A78BFA;--a3:#34D399;--a4:#F472B6;--warn:#FBBF24;--bad:#F87171;
+  --shadow:0 10px 40px rgba(0,0,0,.35);--side:280px;
+  --font:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  --display:ui-rounded,Georgia,"Times New Roman",serif;--mono:ui-monospace,Menlo,Consolas,monospace;
+}
+html[data-theme=warm]{--bg:#FFF6EB;--card:#fff;--ink:#1A1208;--muted:#7A6548;--line:#F0D4B0;--border:#E8C9A0;--a1:#E8820C;--a2:#8B5CF6;--a3:#159947;--a4:#E11D48;--shadow:0 8px 28px rgba(26,18,8,.08)}
+html[data-theme=cobalt]{--bg:#071525;--card:#0e2a45;--ink:#E8F3FF;--muted:#8EB6D4;--line:#1e4a6a;--border:#1e4a6a;--a1:#38BDF8;--a2:#60A5FA;--a3:#2DD4BF;--a4:#F472B6}
+html[data-theme=forest]{--bg:#F3F7F2;--card:#fff;--ink:#14201A;--muted:#5B6E62;--line:#C9D9CE;--border:#C9D9CE;--a1:#2F6F4E;--a2:#3F8F62;--a3:#0F9B8E;--a4:#B45309;--shadow:0 8px 24px rgba(20,32,26,.08)}
+html[data-theme=aurora]{--bg:#0c0a1a;--card:#16132b;--ink:#F5F0FF;--muted:#A99BC8;--line:#2d2650;--border:#352e5c;--a1:#22D3EE;--a2:#C084FC;--a3:#4ADE80;--a4:#FB7185}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{max-width:100%;overflow-x:hidden}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.55;font-size:15px}
+a{color:var(--a1);text-decoration:none}
+a:hover{text-decoration:underline}
+.banner{background:linear-gradient(90deg,#0ea5e9,#8b5cf6,#ec4899);color:#fff;padding:8px 12px;font-weight:800;font-size:12px;text-align:center;letter-spacing:.02em}
+.top{position:sticky;top:0;z-index:50;display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 12px;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.brand{font-family:var(--display);font-weight:900;font-size:1.05rem;background:linear-gradient(90deg,var(--a1),var(--a2));-webkit-background-clip:text;color:transparent}
+.brand small{display:block;font-family:var(--font);font-weight:600;font-size:11px;color:var(--muted);-webkit-text-fill-color:var(--muted);margin-top:1px}
+.spacer{flex:1}
+.btn,select,input[type=search]{border:1px solid var(--border);background:var(--card);color:var(--ink);border-radius:10px;padding:7px 10px;font:inherit;font-size:13px}
+.btn{cursor:pointer;font-weight:700}
+.btn:hover{border-color:var(--a1)}
+.btn.primary{background:linear-gradient(135deg,var(--a1),var(--a2));color:#fff;border:0}
+input[type=search]{min-width:180px;flex:1;max-width:320px}
+.layout{display:grid;grid-template-columns:var(--side) 1fr;min-height:calc(100vh - 90px)}
+.side{border-right:1px solid var(--border);padding:14px 12px;position:sticky;top:58px;height:calc(100vh - 58px);overflow:auto;background:color-mix(in srgb,var(--card) 55%,var(--bg))}
+.side h3{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:12px 0 6px}
+.side a.nav{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:13px;font-weight:600;margin-bottom:2px}
+.side a.nav:hover,.side a.nav.on{background:color-mix(in srgb,var(--a1) 18%,transparent);text-decoration:none;color:var(--a1)}
+.main{padding:22px 20px 80px;max-width:920px}
+.hero{background:linear-gradient(135deg,color-mix(in srgb,var(--a1) 25%,var(--card)),color-mix(in srgb,var(--a2) 20%,var(--card)));border:1px solid var(--border);border-radius:20px;padding:28px 24px;box-shadow:var(--shadow);margin-bottom:22px}
+.hero h1{font-family:var(--display);font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.15;margin-bottom:8px}
+.hero p{color:var(--muted);max-width:54ch}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.badge{font-size:12px;font-weight:800;padding:5px 10px;border-radius:999px;background:color-mix(in srgb,var(--card) 80%,transparent);border:1px solid var(--border)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;box-shadow:var(--shadow)}
+.card h3{font-size:1rem;margin-bottom:6px}
+.card p,.card li{color:var(--muted);font-size:.92rem}
+.card ul{padding-left:1.1rem;margin-top:6px}
+.card.rtma{border-top:3px solid var(--a1)}
+.card.tool{border-top:3px solid var(--a2)}
+.card.eval{border-top:3px solid var(--a3)}
+.card.warn{border-top:3px solid var(--warn)}
+.section{margin:28px 0}
+.section h2{font-size:1.35rem;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.section h2 .dot{width:10px;height:10px;border-radius:50%;background:var(--a1);box-shadow:0 0 12px var(--a1)}
+.section > .lead{color:var(--muted);margin-bottom:12px}
+.table-wrap{overflow:auto;border:1px solid var(--border);border-radius:14px;background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+tr:last-child td{border-bottom:0}
+code,.mono{font-family:var(--mono);font-size:.86em}
+pre{background:#0a0f1c;color:#dbe7ff;border-radius:14px;padding:14px 16px;overflow:auto;font-family:var(--mono);font-size:12.5px;line-height:1.55;border:1px solid var(--border);margin:10px 0}
+html[data-theme=warm] pre,html[data-theme=forest] pre{background:#1a1520;color:#f5e9d8}
+.k{display:inline-block;padding:1px 7px;border-radius:6px;background:color-mix(in srgb,var(--a1) 15%,var(--card));color:var(--a1);font-weight:700;font-size:12px}
+.check{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed var(--line)}
+.check:last-child{border-bottom:0}
+.check input{margin-top:4px;accent-color:var(--a3)}
+.check label{cursor:pointer;flex:1}
+.foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:12px}
+.tag{font-size:11px;font-weight:800;color:var(--a3)}
+.q-item{padding:12px 0;border-bottom:1px solid var(--line)}
+.q-item strong{display:block;margin-bottom:4px}
+.hidden{display:none !important}
+.progress{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin:8px 0 0}
+.progress > i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--a3),var(--a1));transition:width .25s}
+@media (max-width:860px){
+  .layout{grid-template-columns:1fr}
+  .side{position:relative;top:0;height:auto;border-right:0;border-bottom:1px solid var(--border)}
+  input[type=search]{max-width:none}
+}
+</style>
+</head>
+<body>
+<div class="banner">FREE SHARE · Phase 1 Golden Slice · Educational only · No warranty · CYPHER0X9</div>
+<header class="top">
+  <div class="brand">AI Lab Free University <small>v1 · Golden Slice · RTMA</small></div>
+  <input id="q" type="search" placeholder="Search (Cmd/Ctrl+K)…" aria-label="Search"/>
+  <select id="theme" aria-label="Theme">
+    <option value="night">Night</option>
+    <option value="cobalt">Cobalt</option>
+    <option value="aurora">Aurora</option>
+    <option value="warm">Warm</option>
+    <option value="forest">Forest</option>
+  </select>
+  <button class="btn" id="btnFocus" type="button">Focus</button>
+  <button class="btn primary" id="btnTop" type="button">Top</button>
+</header>
+<div class="layout">
+  <aside class="side" id="side">
+    <h3>Navigate</h3>
+    <a class="nav on" href="#home">Home</a>
+    <a class="nav" href="#rtma">RTMA grammar</a>
+    <a class="nav" href="#schools">Schools map</a>
+    <a class="nav" href="#slice">Golden slice path</a>
+    <a class="nav" href="#labs">Labs 01–03</a>
+    <a class="nav" href="#eval">Golden-10 eval</a>
+    <a class="nav" href="#green">GREEN checklist</a>
+    <a class="nav" href="#safety">Safety</a>
+    <a class="nav" href="#github">GitHub later</a>
+    <h3>Open files</h3>
+    <a class="nav" href="../START-HERE.md">START-HERE.md</a>
+    <a class="nav" href="../VISION.md">VISION.md</a>
+    <a class="nav" href="../phase1-golden-slice/README.md">Slice README</a>
+    <h3>Sibling</h3>
+    <a class="nav" href="https://github.com/cipher0x9/uc-lab-free-university" target="_blank" rel="noopener">UC Lab Free University</a>
+    <a class="nav" href="https://linktr.ee/cyphermonkey" target="_blank" rel="noopener">Linktree</a>
+  </aside>
+  <main class="main" id="main">
+    <section class="hero" id="home" data-search="home intro cypher0x9 mac mini free share">
+      <div class="tag">PHASE 1 · COMPACT SLICE · FOR EVERYONE</div>
+      <h1>From confused builder → confident local + cloud AI operator</h1>
+      <p>Free public university slice — domain experts, engineers, students. Full curriculum: <strong>v2-UNIVERSITY.html</strong>. Evidence-first. Offline-friendly. Small by default.</p>
+      <div class="badges">
+        <span class="badge">RTMA = Run · Trace · Metric · Artifact</span>
+        <span class="badge">Mirrors UC LICC</span>
+        <span class="badge">No keys required</span>
+        <span class="badge">≤ 20 MB default</span>
+      </div>
+      <div class="grid" style="margin-top:18px">
+        <div class="card rtma"><h3>Promise</h3><p>Local model · tools · evals · domain braid · free share — without guru noise.</p></div>
+        <div class="card tool"><h3>This slice</h3><p>Hello → tool call → 10-question eval → GREEN pack.</p></div>
+        <div class="card eval"><h3>You</h3><p>CYPHER0X9 · Cisco/UC ~10y · AI learner-builder · allowed to begin.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="rtma" data-search="rtma licc run trace metric artifact falsifier">
+      <h2><span class="dot"></span> RTMA teaching grammar</h2>
+      <p class="lead">The AI twin of UC <strong>LICC</strong> (Leg · ID · Counter · Capture). Prove work with evidence, not vibes.</p>
+      <div class="grid">
+        <div class="card rtma"><h3>Run</h3><p>Exact command, notebook cell, or agent task you executed.</p><p class="mono" style="margin-top:8px;color:var(--a1)">python3 lab/01_local_hello.py</p></div>
+        <div class="card tool"><h3>Trace</h3><p>Request IDs, logs, tool-call chain, span events.</p></div>
+        <div class="card eval"><h3>Metric</h3><p>Latency ms · tokens · cost · accuracy · pass@k · error rate.</p></div>
+        <div class="card warn"><h3>Artifact</h3><p>Output file, screenshot, eval report, GREEN checklist.</p></div>
+      </div>
+      <div class="card" style="margin-top:12px">
+        <h3>Falsifier first</h3>
+        <p>What observation would kill “the model is smart enough”? Empty answers, missing tool chains, pass_rate below threshold, no artifact.</p>
+      </div>
+      <div class="table-wrap" style="margin-top:14px">
+        <table>
+          <thead><tr><th>UC (voice)</th><th>AI Lab</th><th>Why it maps</th></tr></thead>
+          <tbody>
+            <tr><td>Leg</td><td><span class="k">Run</span></td><td>What path did you actually take?</td></tr>
+            <tr><td>ID</td><td><span class="k">Trace</span></td><td>Identifiers &amp; chain of custody</td></tr>
+            <tr><td>Counter</td><td><span class="k">Metric</span></td><td>Numbers that survive debate</td></tr>
+            <tr><td>Capture</td><td><span class="k">Artifact</span></td><td>Something you can reopen later</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="schools" data-search="schools curriculum orientation mental models local cloud rag agents voice evals ship capstone">
+      <h2><span class="dot" style="background:var(--a2)"></span> Curriculum schools</h2>
+      <p class="lead">Modular. Depth in markdown. Phase 1 lights up 00–02 + slice through 06/08.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>ID</th><th>School</th><th>Job</th><th>Phase</th></tr></thead>
+          <tbody>
+            <tr><td>00</td><td>Orientation</td><td>Map, honesty, safety, hardware reality</td><td><strong>Now</strong></td></tr>
+            <tr><td>01</td><td>Mental models</td><td>Tokens, context, failure modes without math fear</td><td><strong>Now</strong></td></tr>
+            <tr><td>02</td><td>Local lab (Mac Mini)</td><td>Ollama/Metal, catalog, thermal</td><td><strong>Now</strong></td></tr>
+            <tr><td>03</td><td>Cloud APIs</td><td>Keys vault, structured output, cost</td><td>2+</td></tr>
+            <tr><td>04</td><td>Prompt systems</td><td>Contracts, eval-driven prompts</td><td>2+</td></tr>
+            <tr><td>05</td><td>RAG</td><td>Chunks, citations, UC corpus</td><td>3</td></tr>
+            <tr><td>06</td><td>Agents &amp; tools</td><td>Schema, permissions, handoffs</td><td><strong>Lab 02</strong></td></tr>
+            <tr><td>07</td><td>Voice AI bridge</td><td>STT/TTS/latency — UC superpower</td><td>3</td></tr>
+            <tr><td>08</td><td>Evals &amp; safety</td><td>Red team, PII, human override</td><td><strong>Lab 03</strong></td></tr>
+            <tr><td>09</td><td>Ship &amp; share</td><td>Small HTML, GitHub Release</td><td>4</td></tr>
+            <tr><td>10</td><td>Capstone</td><td>Coach from UC free pack daily</td><td>later</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="slice" data-search="golden slice vertical path verify">
+      <h2><span class="dot" style="background:var(--a3)"></span> Golden vertical slice</h2>
+      <p class="lead"><strong>local hello → tool call → eval of 10 questions → GREEN pack</strong></p>
+      <pre>cd AI-LAB-FREE-SHARE
+bash scripts/verify_slice.sh
+
+# or step by step
+cd phase1-golden-slice
+python3 lab/01_local_hello.py
+python3 lab/02_tool_call.py
+python3 lab/03_run_eval.py</pre>
+      <div class="grid">
+        <div class="card"><h3>1 · Local hello</h3><p>Probe Ollama (or honest mock). Measure latency. Write RTMA JSON.</p></div>
+        <div class="card"><h3>2 · Tool call</h3><p><code>calc</code> + <code>glossary_lookup</code> with schema. Log the chain.</p></div>
+        <div class="card"><h3>3 · Eval</h3><p>Fixed golden-10 suite. Keyword scoring. ≥80% to pass.</p></div>
+        <div class="card"><h3>4 · GREEN</h3><p>Checklist only for what you can explain cold.</p></div>
+      </div>
+      <div class="card warn" style="margin-top:12px">
+        <h3>Mentor honesty</h3>
+        <p>If Ollama is not installed, labs use a <strong>mock local brain</strong>. That still trains RTMA. Do not pretend it is a real model. Install later: ollama.com → <code class="mono">ollama pull llama3.2:3b</code></p>
+      </div>
+    </section>
+
+    <section class="section" id="labs" data-search="lab hello tool calc glossary ollama mock">
+      <h2><span class="dot" style="background:var(--a4)"></span> Labs 01–03 (mechanisms)</h2>
+      <div class="card" style="margin-bottom:12px">
+        <h3>Lab 01 — Local model hello</h3>
+        <p>UC analogy: dial your own lab phone and confirm the media path. If the stack is down, document the failure — still useful.</p>
+        <ul>
+          <li>Probe <code class="mono">http://127.0.0.1:11434</code></li>
+          <li>Generate a short RTMA explanation</li>
+          <li>Artifact under <code class="mono">phase1-golden-slice/artifacts/</code></li>
+        </ul>
+      </div>
+      <div class="card" style="margin-bottom:12px">
+        <h3>Lab 02 — Tool call</h3>
+        <p>UC analogy: CTI connector — do not invent agent state; call the contract and log the transaction.</p>
+        <ul>
+          <li>Tool specs with JSON schema</li>
+          <li>Safe calculator (exact math)</li>
+          <li>Local glossary (RTMA, token, SIP…)</li>
+          <li>Synthesis grounded in tool results only</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Lab 03 — Golden-10 eval</h3>
+        <p>UC analogy: dial-plan regression pack — fixed cases, expected outcomes, pass/fail counters.</p>
+        <ul>
+          <li>Suite file: <code class="mono">evals/golden10.json</code></li>
+          <li>Report: <code class="mono">reports/golden10-report.md</code></li>
+          <li>Threshold: 80%</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="eval" data-search="golden10 questions quiz keywords pass rate">
+      <h2><span class="dot"></span> Golden-10 questions</h2>
+      <p class="lead">Study these. The automated suite checks required keywords. You should still be able to teach each answer.</p>
+      <div id="questions">
+        <div class="q-item" data-search="rtma stand for"><strong>Q01 · What does RTMA stand for?</strong><span style="color:var(--muted)">Run · Trace · Metric · Artifact</span></div>
+        <div class="q-item" data-search="licc uc"><strong>Q02 · Which UC grammar does RTMA mirror?</strong><span style="color:var(--muted)">LICC — Leg · ID · Counter · Capture</span></div>
+        <div class="q-item" data-search="token chunk"><strong>Q03 · What is a token?</strong><span style="color:var(--muted)">A chunk of text the model reads or writes</span></div>
+        <div class="q-item" data-search="hallucination fluent evidence"><strong>Q04 · What is a hallucination here?</strong><span style="color:var(--muted)">Fluent answer not grounded in evidence</span></div>
+        <div class="q-item" data-search="tool schema exact"><strong>Q05 · Why tool call over invented math?</strong><span style="color:var(--muted)">Schema + exact result vs invention</span></div>
+        <div class="q-item" data-search="ollama 11434"><strong>Q06 · Default Ollama port?</strong><span style="color:var(--muted)">11434 on localhost</span></div>
+        <div class="q-item" data-search="760 html non-goal"><strong>Q07 · One non-goal of first free pack?</strong><span style="color:var(--muted)">Not a 760MB single HTML</span></div>
+        <div class="q-item" data-search="keys secrets git"><strong>Q08 · What never goes in public git?</strong><span style="color:var(--muted)">API keys (also customer data / private chats)</span></div>
+        <div class="q-item" data-search="github repo name"><strong>Q09 · Suggested public repo name?</strong><span style="color:var(--muted)">ai-lab-free-university</span></div>
+        <div class="q-item" data-search="hello tool eval green path"><strong>Q10 · Phase-1 path in four steps?</strong><span style="color:var(--muted)">hello → tool → eval → GREEN</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="green" data-search="green checklist completion ticks">
+      <h2><span class="dot" style="background:var(--a3)"></span> GREEN checklist</h2>
+      <p class="lead">Tick only what you can explain without notes. Progress is saved in this browser (localStorage).</p>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
+          <strong id="greenCount">0 / 0</strong>
+          <button class="btn" type="button" id="btnResetGreen">Reset ticks</button>
+        </div>
+        <div class="progress"><i id="greenBar"></i></div>
+        <div id="checks" style="margin-top:10px"></div>
+      </div>
+    </section>
+
+    <section class="section" id="safety" data-search="safety secrets pii approval autonomy">
+      <h2><span class="dot" style="background:var(--bad)"></span> Safety &amp; free-share rules</h2>
+      <div class="grid">
+        <div class="card warn"><h3>Never in repo</h3><ul><li>API keys / .env</li><li>Customer data / PCAPs with PII</li><li>Private chats</li><li>Model weight blobs</li></ul></div>
+        <div class="card"><h3>Autonomy limits</h3><ul><li>No auto-email / auto-post</li><li>Human approval for external actions</li><li>Tools default least privilege</li></ul></div>
+        <div class="card"><h3>Size discipline</h3><ul><li>Default HTML ≤ 10–20 MB</li><li>Depth in markdown modules</li><li>Huge archives optional + labeled</li></ul></div>
+        <div class="card"><h3>UC pack</h3><ul><li>Never delete UC free share</li><li>Sibling, not replacement</li><li>School 07 + UC corpus later</li></ul></div>
+      </div>
+    </section>
+
+    <section class="section" id="github" data-search="github release publish linktree ai-lab-free-university">
+      <h2><span class="dot" style="background:var(--a2)"></span> GitHub later (not yet)</h2>
+      <p class="lead">Public repo when the slice is solid: <strong>ai-lab-free-university</strong> · account cipher0x9.</p>
+      <ol style="margin-left:1.2rem;color:var(--muted)">
+        <li>Pass verify script + explain RTMA cold</li>
+        <li>Secret scan clean</li>
+        <li>Create public repo + Release zip</li>
+        <li>Pin + Linktree button → https://linktr.ee/cyphermonkey</li>
+      </ol>
+      <p style="margin-top:10px">See <code class="mono">GITHUB-PUBLISH-PLAN.md</code>.</p>
+    </section>
+
+    <footer class="foot">
+      AI Lab Free University v1 Slice · MIT · CYPHER0X9 / cipher0x9<br/>
+      Sibling: UC Lab Free University · Educational only — pin vendor docs for production.<br/>
+      Built for the mentor you wanted in voice: calm, structured, free, honest about limits.
+    </footer>
+  </main>
+</div>
+<script>
+(function(){
+  const THEME_KEY='ailab-theme-v1';
+  const GREEN_KEY='ailab-green-v1';
+  const themeEl=document.getElementById('theme');
+  const saved=localStorage.getItem(THEME_KEY)||'night';
+  document.documentElement.setAttribute('data-theme',saved);
+  themeEl.value=saved;
+  themeEl.addEventListener('change',()=>{
+    document.documentElement.setAttribute('data-theme',themeEl.value);
+    localStorage.setItem(THEME_KEY,themeEl.value);
+  });
+
+  const items=[
+    'I ran verify_slice.sh (or labs 01–03)',
+    'I opened at least one artifacts/*.json',
+    'I opened reports/golden10-report.md',
+    'I can explain Run without notes',
+    'I can explain Trace without notes',
+    'I can explain Metric without notes',
+    'I can explain Artifact without notes',
+    'I can state a falsifier for "model is smart enough"',
+    'I know mock vs Ollama honesty',
+    'I know why tool schema beats invented math',
+    'I know what never goes in git',
+    'I can map LICC → RTMA in one sentence',
+    'I will not delete the UC free pack for this project'
+  ];
+  const box=document.getElementById('checks');
+  let state={};
+  try{state=JSON.parse(localStorage.getItem(GREEN_KEY)||'{}')}catch(e){state={}}
+  function render(){
+    box.innerHTML='';
+    let on=0;
+    items.forEach((t,i)=>{
+      const id='g'+i;
+      const checked=!!state[id];
+      if(checked) on++;
+      const row=document.createElement('div');
+      row.className='check';
+      row.innerHTML=`<input type="checkbox" id="${id}" ${checked?'checked':''}/><label for="${id}">${t}</label>`;
+      box.appendChild(row);
+      row.querySelector('input').addEventListener('change',e=>{
+        state[id]=e.target.checked;
+        localStorage.setItem(GREEN_KEY,JSON.stringify(state));
+        render();
+      });
+    });
+    document.getElementById('greenCount').textContent=on+' / '+items.length;
+    document.getElementById('greenBar').style.width=((on/items.length)*100)+'%';
+  }
+  render();
+  document.getElementById('btnResetGreen').onclick=()=>{state={};localStorage.removeItem(GREEN_KEY);render()};
+
+  // search
+  const q=document.getElementById('q');
+  function applySearch(){
+    const term=(q.value||'').trim().toLowerCase();
+    document.querySelectorAll('[data-search], .q-item, .section, .hero').forEach(el=>{
+      if(!term){el.classList.remove('hidden');return;}
+      const hay=((el.getAttribute('data-search')||'')+' '+el.textContent).toLowerCase();
+      el.classList.toggle('hidden',!hay.includes(term));
+    });
+  }
+  q.addEventListener('input',applySearch);
+  document.addEventListener('keydown',e=>{
+    if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();q.focus();q.select()}
+  });
+
+  document.getElementById('btnTop').onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+  let focus=false;
+  document.getElementById('btnFocus').onclick=()=>{
+    focus=!focus;
+    document.getElementById('side').style.display=focus?'none':'';
+    document.querySelector('.layout').style.gridTemplateColumns=focus?'1fr':'var(--side) 1fr';
+  };
+
+  // active nav
+  const navs=[...document.querySelectorAll('.side a.nav[href^="#"]')];
+  const map=navs.map(a=>({a,id:a.getAttribute('href').slice(1)}));
+  function syncNav(){
+    let cur='home';
+    map.forEach(({id})=>{
+      const el=document.getElementById(id);
+      if(el && el.getBoundingClientRect().top<120) cur=id;
+    });
+    navs.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+cur));
+  }
+  window.addEventListener('scroll',syncNav,{passive:true});
+  syncNav();
+})();
+</script>
+</body>
+</html>
