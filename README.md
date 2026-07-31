@@ -14,8 +14,8 @@
 
 ### Main free pack (recommended)
 
-**→ [Download v4-PORTFOLIO.html.zip](https://github.com/cipher0x9/ai-lab-free-university/releases/latest)**  
-*(after first Release is published — also in [`zips/v4-PORTFOLIO.html.zip`](./zips/v4-PORTFOLIO.html.zip))*
+**→ [Download v4-PORTFOLIO.html.zip](https://github.com/cipher0x9/ai-lab-free-university/releases/download/v4.0-free/v4-PORTFOLIO.html.zip)**  
+Also on the [Release page](https://github.com/cipher0x9/ai-lab-free-university/releases/tag/v4.0-free) and in [`zips/v4-PORTFOLIO.html.zip`](./zips/v4-PORTFOLIO.html.zip).
 
 1. Download the zip  
 2. Unzip  

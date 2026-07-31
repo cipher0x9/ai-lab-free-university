@@ -4,41 +4,45 @@ Everything here is **free** for learning.
 
 ## Main university (recommended)
 
-| File | Path |
+| File | Link |
 |------|------|
-| **Portfolio campus HTML (recommended)** | [`university/v4-PORTFOLIO.html`](./university/v4-PORTFOLIO.html) |
-| **Zip (share this)** | [`zips/v4-PORTFOLIO.html.zip`](./zips/v4-PORTFOLIO.html.zip) |
-| Lifetime campus | [`university/v3-LIFETIME.html`](./university/v3-LIFETIME.html) |
-| Prior general pack | [`university/v2-UNIVERSITY.html`](./university/v2-UNIVERSITY.html) |
-| Compact Phase-1 slice | [`university/v1-SLICE.html`](./university/v1-SLICE.html) |
-| Slice zip | [`zips/v1-SLICE.html.zip`](./zips/v1-SLICE.html.zip) |
+| **Zip (recommended)** | https://github.com/cipher0x9/ai-lab-free-university/releases/download/v4.0-free/v4-PORTFOLIO.html.zip |
+| Release page | https://github.com/cipher0x9/ai-lab-free-university/releases/tag/v4.0-free |
+| Also in repo | [`zips/v4-PORTFOLIO.html.zip`](./zips/v4-PORTFOLIO.html.zip) |
+| Unzipped HTML | [`university/v4-PORTFOLIO.html`](./university/v4-PORTFOLIO.html) |
 
-**How to use:** unzip (if needed) → double-click the HTML → Chrome / Safari / Edge / Firefox.
+**How to use:** download zip → unzip → open `v4-PORTFOLIO.html`  
+Default theme: **Aurora Dream** (recommended).
 
-## Runnable labs
+## Other packs
 
-Clone or copy the full folder, then:
+| File | Link |
+|------|------|
+| Lifetime campus zip | https://github.com/cipher0x9/ai-lab-free-university/releases/download/v4.0-free/v3-LIFETIME.html.zip |
+| Compact Phase-1 zip | https://github.com/cipher0x9/ai-lab-free-university/releases/download/v4.0-free/v1-SLICE.html.zip |
+| Prior v2 zip | https://github.com/cipher0x9/ai-lab-free-university/releases/download/v4.0-free/v2-UNIVERSITY.html.zip |
+
+## Full repository
+
+| | |
+|--|--|
+| Clone | `git clone https://github.com/cipher0x9/ai-lab-free-university.git` |
+| Browse | https://github.com/cipher0x9/ai-lab-free-university |
+
+Then optionally:
 
 ```bash
 bash scripts/verify_slice.sh
 ```
 
-Python 3 required. No API keys for Phase 1.
+## Sibling UC pack
 
-## Public GitHub (when released)
+https://github.com/cipher0x9/uc-lab-free-university
 
-Planned:
-
-- Repo: `https://github.com/cipher0x9/ai-lab-free-university`  
-- Release asset: `v2-UNIVERSITY.html.zip`  
-
-Until the public Release exists, share the local zip educationally.
-
-## Sibling UC pack (already public)
+## Other links
 
 | | |
 |--|--|
-| UC Lab Free University | https://github.com/cipher0x9/uc-lab-free-university |
 | Author | https://github.com/cipher0x9 |
 | Linktree | https://linktr.ee/cyphermonkey |
 
