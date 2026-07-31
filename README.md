@@ -134,7 +134,7 @@ Path: local hello → tool call → golden evals → size budget check.
 | **Default theme** | **Aurora Dream** (switch anytime in HTML) |
 | **Sibling** | 🌿 UC Lab — teal `#0F9B8E` · grammar **LICC** |
 | **Hub** | [linktr.ee/cyphermonkey](https://linktr.ee/cyphermonkey) |
-| **Author** | [@CYPHER0X9](https://github.com/cipher0x9) |
+| **Author** | **CYPHER0X9** · [@cipher0x9](https://github.com/cipher0x9) |
 
 ---
 
@@ -161,6 +161,13 @@ Public pack is **browser-friendly on purpose** (no multi-hundred-MB bomb).
 Lab safely. Pin official vendor docs for production.
 
 [SECURITY.md](./SECURITY.md) · [CONTRIBUTING.md](./CONTRIBUTING.md) · [VISION.md](./VISION.md)
+
+---
+
+## 🏷️ Brand (canonical)
+
+**Display:** CYPHER0X9 · **GitHub login/links:** [@cipher0x9](https://github.com/cipher0x9) only  
+Full rule sheet: **[BRAND.md](./BRAND.md)**
 
 ---
 

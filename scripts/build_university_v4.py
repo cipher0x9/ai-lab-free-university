@@ -800,7 +800,7 @@ window.AILAB_V4 = {{
           <button type="button" class="pill" id="pillTodo">Unstudied only</button>
         </div>
         {''.join(lesson_cards)}
-        <div class="footer-note">AI Lab Free University v4 · MIT educational · No warranty · Sibling: UC Lab Free University · Author CYPHER0X9</div>
+        <div class="footer-note">AI Lab Free University v4 · MIT educational · No warranty · Sibling: UC Lab Free University · Author CYPHER0X9 · github.com/cipher0x9</div>
       </section>
 
       <section class="view" id="view-resources">
