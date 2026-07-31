@@ -1,23 +1,24 @@
-I published a free offline AI learning pack I built while learning.
+I built two free offline universities while learning — and I’m sharing both.
 
-AI Lab Free University
-From confused builder → confident local + cloud AI operator.
+🌿 UC Lab Free University
+For voice / collaboration / contact-center engineers who wanted mentorship, multi-vendor clarity, and proof habits (LICC: Leg · ID · Counter · Capture) — not just another cert pack.
 
-What you get (free):
-• Beautiful offline campus (open one HTML file)
-• Multi-level curriculum + themes
-• Runnable labs (no API keys to start)
-• RTMA evidence habit: Run · Trace · Metric · Artifact
-• 1000+ curated public resource links
+🧠 AI Lab Free University
+For builders learning local + cloud AI the operator way — agents, evals, Hermes, 425 lessons, 1000+ links, beautiful Aurora campus, optional Python labs with no API keys (RTMA: Run · Trace · Metric · Artifact).
 
-I’m not an AI native — I’m a long-time Cisco/UC engineer learning AI the operator way.
-Sibling free pack (UC/voice): already public as UC Lab Free University.
+Same safety bar:
+• Free · MIT · educational only
+• Browser-friendly offline HTML
+• No secrets · no customer data
+• Open one file and learn
 
-Educational only · MIT · no warranty · lab safely
+I’m a long-time Cisco/UC engineer learning AI in public.
+If either pack helps even one person, it was worth shipping.
 
-GitHub:
-https://github.com/cipher0x9/ai-lab-free-university
+🌿 UC → https://github.com/cipher0x9/uc-lab-free-university
+🧠 AI → https://github.com/cipher0x9/ai-lab-free-university
+🔗 Hub → https://linktr.ee/cyphermonkey
 
-If it helps you, share it with one friend who’s learning too.
+Download zips (no Git needed) in the first comment.
 
-#AI #LearningInPublic #OpenSource #MacMini #Agents #LocalLLM
+#UnifiedCommunications #AI #OpenSource #LearningInPublic #ContactCenter #LocalLLM #Agents #FreeLearning #MacMini #Mentorship

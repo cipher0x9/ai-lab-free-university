@@ -1,13 +1,15 @@
-Free pack map:
+Direct downloads (no Git):
 
-1) Open university/v2-UNIVERSITY.html offline (themes + search + mark studied)
-2) bash scripts/verify_slice.sh  → labs + 10-question eval (no API keys)
-3) RTMA = Run · Trace · Metric · Artifact (AI twin of UC LICC)
+🌿 UC campus zip
+https://github.com/cipher0x9/uc-lab-free-university/releases/download/v17.0-free/v17-UNIVERSITY.html.zip
 
-Sibling UC free university:
-https://github.com/cipher0x9/uc-lab-free-university
+🧠 AI campus zip (Aurora Portfolio)
+https://github.com/cipher0x9/ai-lab-free-university/releases/download/v4.0-free/v4-PORTFOLIO.html.zip
 
-Linktree:
-https://linktr.ee/cyphermonkey
+Repos
+🌿 https://github.com/cipher0x9/uc-lab-free-university
+🧠 https://github.com/cipher0x9/ai-lab-free-university
 
-When the AI public repo/release is live, this comment gets the GitHub + zip links.
+Hub: https://linktr.ee/cyphermonkey
+
+Unzip → open the HTML → learn offline.
