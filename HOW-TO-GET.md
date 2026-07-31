@@ -20,7 +20,7 @@
 ## A) Download zip (easiest) ⭐
 
 1. Open:  
-   **https://github.com/cipher0x9/ai-lab-free-university/releases/tag/v4.0-free**
+   **https://github.com/CYPHER0X9/ai-lab-free-university/releases/tag/v4.0-free**
 2. Download **`v4-PORTFOLIO.html.zip`**
 3. Unzip on your computer  
 4. Double-click **`v4-PORTFOLIO.html`**  
@@ -29,13 +29,13 @@
 **Default theme:** Aurora Dream  
 
 Direct file:  
-https://github.com/cipher0x9/ai-lab-free-university/releases/download/v4.0-free/v4-PORTFOLIO.html.zip
+https://github.com/CYPHER0X9/ai-lab-free-university/releases/download/v4.0-free/v4-PORTFOLIO.html.zip
 
 ---
 
 ## B) Download full repo as ZIP (no Git)
 
-1. Open: **https://github.com/cipher0x9/ai-lab-free-university**  
+1. Open: **https://github.com/CYPHER0X9/ai-lab-free-university**  
 2. Click green **Code** → **Download ZIP**  
 3. Unzip → open `university/v4-PORTFOLIO.html`  
 4. Optional labs: need Python 3, then `bash scripts/verify_slice.sh`
@@ -47,7 +47,7 @@ This is **safe copy**. It is the public educational tree only (no secrets, no mo
 ## C) Clone with Git (builders)
 
 ```bash
-git clone https://github.com/cipher0x9/ai-lab-free-university.git
+git clone https://github.com/CYPHER0X9/ai-lab-free-university.git
 cd ai-lab-free-university
 open university/v4-PORTFOLIO.html
 # optional labs:
@@ -80,8 +80,8 @@ Add / pin these buttons on Linktree (for you, maintainer):
 
 | | |
 |--|--|
-| Repo | https://github.com/cipher0x9/uc-lab-free-university |
-| Main zip | https://github.com/cipher0x9/uc-lab-free-university/releases/download/v17.0-free/v17-UNIVERSITY.html.zip |
+| Repo | https://github.com/CYPHER0X9/uc-lab-free-university |
+| Main zip | https://github.com/CYPHER0X9/uc-lab-free-university/releases/download/v17.0-free/v17-UNIVERSITY.html.zip |
 | How-to | Same pattern: Release zip → open HTML, or clone the small public repo |
 
 ---
@@ -113,7 +113,7 @@ Add / pin these buttons on Linktree (for you, maintainer):
 - Do not paste production secrets into forks/issues  
 - Opening HTML is local; it does not auto-install malware from this pack’s design  
 
-### For you (cipher0x9)
+### For you (CYPHER0X9)
 - Only publish the **scrubbed free pack** (already the case)  
 - Keep private lab configs, keys, Hermes private auth, customer data **off GitHub**  
 - Large optional archives stay **local** or private cloud if you choose — not required for free share  
@@ -124,7 +124,7 @@ Add / pin these buttons on Linktree (for you, maintainer):
 ## Support
 
 - Open a GitHub Issue on the repo (kind, educational questions)  
-- Profile: https://github.com/cipher0x9  
+- Profile: https://github.com/CYPHER0X9  
 - Linktree: https://linktr.ee/cyphermonkey  
 
 Be kind. Lab safely. Share freely for learning.

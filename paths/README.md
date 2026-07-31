@@ -20,7 +20,7 @@ Golden slice + read lab source → Prompts + structured output → Agent permiss
 
 ## Path E — Voice / UC specialist
 
-RTMA handbook fully → golden slice → 01/02/06/08 → School 07 → plan UC corpus RAG → keep [UC free pack](https://github.com/cipher0x9/uc-lab-free-university) installed as sibling.
+RTMA handbook fully → golden slice → 01/02/06/08 → School 07 → plan UC corpus RAG → keep [UC free pack](https://github.com/CYPHER0X9/uc-lab-free-university) installed as sibling.
 
 ## Rule
 

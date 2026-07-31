@@ -18,7 +18,7 @@ open university/v4-PORTFOLIO.html
 
 Or download first:
 
-→ https://github.com/cipher0x9/ai-lab-free-university/releases/download/v4.0-free/v4-PORTFOLIO.html.zip
+→ https://github.com/CYPHER0X9/ai-lab-free-university/releases/download/v4.0-free/v4-PORTFOLIO.html.zip
 
 **Default theme:** Aurora Dream  
 Also available: `v3-LIFETIME.html` · `v2-UNIVERSITY.html` · `v1-SLICE.html`
@@ -78,7 +78,7 @@ If you cannot explain RTMA without notes, you are not done with Orientation.
 | Runnable labs | `phase1-golden-slice/` |
 | School markdown | `schools/` |
 | Share drafts | `share-post/` |
-| Sibling UC | https://github.com/cipher0x9/uc-lab-free-university |
+| Sibling UC | https://github.com/CYPHER0X9/uc-lab-free-university |
 
 ---
 

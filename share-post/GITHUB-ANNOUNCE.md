@@ -23,7 +23,7 @@ I’m not an “AI native.” I’m a long-time Cisco / UC engineer who’s been
 - Runnable Phase-1 labs (no API keys required to start)
 - RTMA evidence habit: **Run · Trace · Metric · Artifact**
 - 1000+ curated public resource links
-- Sibling to my free UC pack: https://github.com/cipher0x9/uc-lab-free-university
+- Sibling to my free UC pack: https://github.com/CYPHER0X9/uc-lab-free-university
 
 If it helps even one person learn with less noise, it was worth sharing.
 
@@ -65,7 +65,7 @@ Pin official vendor docs for production work.
 
 Learning in public. Sharing so the next person has a clearer map than I did.
 
-— cipher0x9 / CYPHER0X9  
+— CYPHER0X9  
 https://linktr.ee/cyphermonkey
 
 ---
@@ -77,7 +77,7 @@ I published a free offline AI learning pack I built while learning:
 **AI Lab Free University**  
 Open one HTML file → curriculum + themes + 1000+ resource links + runnable labs (no keys to start).
 
-Repo: https://github.com/cipher0x9/ai-lab-free-university  
+Repo: https://github.com/CYPHER0X9/ai-lab-free-university  
 
 Built with the same free-share discipline as my UC Lab Free University.  
 If it helps you, share it with one friend who’s learning too.

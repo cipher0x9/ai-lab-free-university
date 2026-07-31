@@ -342,7 +342,7 @@ def generate() -> tuple[list[dict], dict]:
         "version": "v3-lifetime",
         "tagline": "Lifetime mastery: local + cloud AI, agents, evals, Hermes, future stack",
         "subtitle": "Full-scale free university · evidence-first · general audience · Mac Mini ready",
-        "author": "CYPHER0X9 / cipher0x9",
+        "author": "CYPHER0X9",
         "sections": len(uniq),
         "divisions": len(DIVISIONS),
         "sources": [r["title"] for r in RESEARCH_SOURCES],
