@@ -1,4 +1,4 @@
-# AI Lab Free University
+# 🧠 AI Lab Free University
 
 **Free for everyone.** Offline-friendly AI university I built **while learning** — so others can learn with less noise.
 
