@@ -10,20 +10,41 @@
 
 ---
 
-## Download (easiest)
+## How to get it (safe · free · clear)
 
-### Main free pack (recommended)
+**Full guide:** **[HOW-TO-GET.md](./HOW-TO-GET.md)** · **Sibling map:** **[SIBLINGS.md](./SIBLINGS.md)** · **Linktree:** https://linktr.ee/cyphermonkey
 
-**→ [Download v4-PORTFOLIO.html.zip](https://github.com/cipher0x9/ai-lab-free-university/releases/download/v4.0-free/v4-PORTFOLIO.html.zip)**  
-Also on the [Release page](https://github.com/cipher0x9/ai-lab-free-university/releases/tag/v4.0-free) and in [`zips/v4-PORTFOLIO.html.zip`](./zips/v4-PORTFOLIO.html.zip).
+### Option A — Download zip (easiest) ⭐
+
+**→ [Download v4-PORTFOLIO.html.zip](https://github.com/cipher0x9/ai-lab-free-university/releases/download/v4.0-free/v4-PORTFOLIO.html.zip)**
 
 1. Download the zip  
 2. Unzip  
 3. Open **`v4-PORTFOLIO.html`** in Chrome / Safari / Edge / Firefox  
 
-**Default theme:** Aurora Dream (recommended). Switch themes anytime in the header.
+Also: [Release page](https://github.com/cipher0x9/ai-lab-free-university/releases/tag/v4.0-free) · [`zips/`](./zips/)
 
-No account. No install for reading. Works offline after download.
+**Default theme:** Aurora Dream. No account. Works offline.
+
+### Option B — Download whole repo (no Git)
+
+On GitHub: green **Code** → **Download ZIP** → unzip → open `university/v4-PORTFOLIO.html`.
+
+### Option C — Clone (builders)
+
+```bash
+git clone https://github.com/cipher0x9/ai-lab-free-university.git
+cd ai-lab-free-university
+open university/v4-PORTFOLIO.html
+# optional labs (Python 3, no API keys):
+bash scripts/verify_slice.sh
+```
+
+### About big / multi-hundred-MB files
+
+Public free pack is **browser-friendly on purpose**.  
+Huge local archives (if you keep any on a Mac Mini) are **optional and not required** for friends.  
+Details: [HOW-TO-GET.md](./HOW-TO-GET.md#about-big--600mb-files-important--honest).
 
 ---
 
@@ -96,14 +117,18 @@ See [SECURITY.md](./SECURITY.md) · [CONTRIBUTING.md](./CONTRIBUTING.md) · [DOW
 
 ---
 
-## Links
+## Links (copy / share)
 
 | | |
 |--|--|
 | **This repo** | https://github.com/cipher0x9/ai-lab-free-university |
+| **Main download zip** | https://github.com/cipher0x9/ai-lab-free-university/releases/download/v4.0-free/v4-PORTFOLIO.html.zip |
 | **Sibling UC free pack** | https://github.com/cipher0x9/uc-lab-free-university |
+| **UC main download zip** | https://github.com/cipher0x9/uc-lab-free-university/releases/download/v17.0-free/v17-UNIVERSITY.html.zip |
 | **Profile** | https://github.com/cipher0x9 |
-| **Linktree** | https://linktr.ee/cyphermonkey |
+| **Linktree (all free links)** | https://linktr.ee/cyphermonkey |
+| **How to download / clone** | [HOW-TO-GET.md](./HOW-TO-GET.md) |
+| **Sibling map** | [SIBLINGS.md](./SIBLINGS.md) |
 
 ---
 

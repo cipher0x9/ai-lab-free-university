@@ -2,6 +2,10 @@
 
 **For everyone** (not a private notebook). Mentor-quality structure, public free-share bar.
 
+**Get the pack (download / clone / zip):** see **[HOW-TO-GET.md](./HOW-TO-GET.md)**  
+**Both free universities:** **[SIBLINGS.md](./SIBLINGS.md)**  
+**Linktree:** https://linktr.ee/cyphermonkey
+
 ## 1) Open the university (0 installs)
 
 ```bash
