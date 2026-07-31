@@ -2,7 +2,7 @@
 
 ## Reporting
 
-If you find a security issue in this learning pack, open a private security advisory on GitHub (when the public repo exists) or contact the maintainer via the GitHub profile [@CYPHER0X9](https://github.com/CYPHER0X9).
+If you find a security issue in this learning pack, open a private security advisory on GitHub (when the public repo exists) or contact the maintainer via the GitHub profile [@CYPHER0X9](https://github.com/cipher0x9).
 
 ## Safe use of this repo
 

@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/CYPHER0X9/ai-lab-free-university/releases/download/v4.0-free/v4-PORTFOLIO.html.zip"><img src="https://img.shields.io/badge/⬇_Download-v4_Portfolio_zip-6366F1?style=for-the-badge&labelColor=0B1220" alt="Download"/></a>
-  <a href="https://github.com/CYPHER0X9/uc-lab-free-university"><img src="https://img.shields.io/badge/🌿_Sibling-UC_Lab_Free-0F9B8E?style=for-the-badge&labelColor=0B1220" alt="UC Lab"/></a>
+  <a href="https://github.com/cipher0x9/ai-lab-free-university/releases/download/v4.0-free/v4-PORTFOLIO.html.zip"><img src="https://img.shields.io/badge/⬇_Download-v4_Portfolio_zip-6366F1?style=for-the-badge&labelColor=0B1220" alt="Download"/></a>
+  <a href="https://github.com/cipher0x9/uc-lab-free-university"><img src="https://img.shields.io/badge/🌿_Sibling-UC_Lab_Free-0F9B8E?style=for-the-badge&labelColor=0B1220" alt="UC Lab"/></a>
   <a href="https://linktr.ee/cyphermonkey"><img src="https://img.shields.io/badge/🔗_Hub-Linktree-E8820C?style=for-the-badge&labelColor=0B1220" alt="Linktree"/></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-159947?style=for-the-badge&labelColor=0B1220" alt="MIT"/></a>
 </p>
@@ -32,7 +32,7 @@ I’m **CYPHER0X9** — long-time **Cisco / UC** engineer, now an AI learner-bui
 
 I already shipped a free voice pack:
 
-**🌿 [UC Lab Free University](https://github.com/CYPHER0X9/uc-lab-free-university)**
+**🌿 [UC Lab Free University](https://github.com/cipher0x9/uc-lab-free-university)**
 
 This is the **sibling**: same free-share discipline, mentor tone, and proof habits — applied to **local models, tools, agents, evals, Hermes**, and future-stack foresight.
 
@@ -45,7 +45,7 @@ This is the **sibling**: same free-share discipline, mentor tone, and proof habi
 
 ### ⭐ Option A — Download zip (recommended)
 
-**→ [Download `v4-PORTFOLIO.html.zip`](https://github.com/CYPHER0X9/ai-lab-free-university/releases/download/v4.0-free/v4-PORTFOLIO.html.zip)**
+**→ [Download `v4-PORTFOLIO.html.zip`](https://github.com/cipher0x9/ai-lab-free-university/releases/download/v4.0-free/v4-PORTFOLIO.html.zip)**
 
 1. Download  
 2. Unzip  
@@ -53,7 +53,7 @@ This is the **sibling**: same free-share discipline, mentor tone, and proof habi
 
 **Default theme: Aurora Dream** · No account · Works offline
 
-Also: [Release page](https://github.com/CYPHER0X9/ai-lab-free-university/releases/tag/v4.0-free) · [`zips/`](./zips/)
+Also: [Release page](https://github.com/cipher0x9/ai-lab-free-university/releases/tag/v4.0-free) · [`zips/`](./zips/)
 
 | Zip | Best for |
 |-----|----------|
@@ -69,7 +69,7 @@ GitHub → green **Code** → **Download ZIP** → open `university/v4-PORTFOLIO
 ### Option C — Clone (builders + labs)
 
 ```bash
-git clone https://github.com/CYPHER0X9/ai-lab-free-university.git
+git clone https://github.com/cipher0x9/ai-lab-free-university.git
 cd ai-lab-free-university
 open university/v4-PORTFOLIO.html
 # optional labs (Python 3 only — no API keys):
@@ -134,7 +134,7 @@ Path: local hello → tool call → golden evals → size budget check.
 | **Default theme** | **Aurora Dream** (switch anytime in HTML) |
 | **Sibling** | 🌿 UC Lab — teal `#0F9B8E` · grammar **LICC** |
 | **Hub** | [linktr.ee/cyphermonkey](https://linktr.ee/cyphermonkey) |
-| **Author** | [@CYPHER0X9](https://github.com/CYPHER0X9) |
+| **Author** | [@CYPHER0X9](https://github.com/cipher0x9) |
 
 ---
 
@@ -146,7 +146,7 @@ Path: local hello → tool call → golden evals → size budget check.
 | Domain expert new to AI | **Path B** |
 | Software engineer | **Path C** |
 | Student / career switch | **Path D** |
-| Voice / UC specialist | **Path E** + [UC sibling](https://github.com/CYPHER0X9/uc-lab-free-university) |
+| Voice / UC specialist | **Path E** + [UC sibling](https://github.com/cipher0x9/uc-lab-free-university) |
 
 Also: [START-HERE.md](./START-HERE.md) · `paths/README.md`
 
@@ -168,12 +168,12 @@ Lab safely. Pin official vendor docs for production.
 
 | | |
 |--|--|
-| **This repo** | https://github.com/CYPHER0X9/ai-lab-free-university |
-| **Main zip ⭐** | https://github.com/CYPHER0X9/ai-lab-free-university/releases/download/v4.0-free/v4-PORTFOLIO.html.zip |
-| **Release** | https://github.com/CYPHER0X9/ai-lab-free-university/releases/tag/v4.0-free |
-| **Sibling UC Lab** | https://github.com/CYPHER0X9/uc-lab-free-university |
-| **UC main zip** | https://github.com/CYPHER0X9/uc-lab-free-university/releases/download/v17.0-free/v17-UNIVERSITY.html.zip |
-| **Profile** | https://github.com/CYPHER0X9 |
+| **This repo** | https://github.com/cipher0x9/ai-lab-free-university |
+| **Main zip ⭐** | https://github.com/cipher0x9/ai-lab-free-university/releases/download/v4.0-free/v4-PORTFOLIO.html.zip |
+| **Release** | https://github.com/cipher0x9/ai-lab-free-university/releases/tag/v4.0-free |
+| **Sibling UC Lab** | https://github.com/cipher0x9/uc-lab-free-university |
+| **UC main zip** | https://github.com/cipher0x9/uc-lab-free-university/releases/download/v17.0-free/v17-UNIVERSITY.html.zip |
+| **Profile** | https://github.com/cipher0x9 |
 | **Linktree** | https://linktr.ee/cyphermonkey |
 
 ---

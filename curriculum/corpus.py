@@ -14,7 +14,7 @@ META = {
     "author": "CYPHER0X9",
     "license": "MIT — educational only, no warranty",
     "sibling": "UC Lab Free University",
-    "sibling_url": "https://github.com/CYPHER0X9/uc-lab-free-university",
+    "sibling_url": "https://github.com/cipher0x9/uc-lab-free-university",
     "linktree": "https://linktr.ee/cyphermonkey",
     "repo_planned": "ai-lab-free-university",
 }
@@ -1181,7 +1181,7 @@ Yes when the public repo is live: additive educational PRs, no secrets, one topi
 """, "faq contribute"),
 
     S("FQ-08", "FQ", "Where is the UC pack?", "beginner", """
-https://github.com/CYPHER0X9/uc-lab-free-university — keep it. AI pack is a sibling, not a replacement.
+https://github.com/cipher0x9/uc-lab-free-university — keep it. AI pack is a sibling, not a replacement.
 """, "faq uc"),
 ]
 

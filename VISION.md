@@ -1,7 +1,7 @@
 # Vision — AI Lab Free University
 
 **Product:** free, offline-friendly AI university for a **general audience**.  
-**Bar:** meet or exceed the finish quality of [UC Lab Free University](https://github.com/CYPHER0X9/uc-lab-free-university) — and beat it on **runnable proof** (labs + evals + RTMA artifacts).
+**Bar:** meet or exceed the finish quality of [UC Lab Free University](https://github.com/cipher0x9/uc-lab-free-university) — and beat it on **runnable proof** (labs + evals + RTMA artifacts).
 
 **Author:** CYPHER0X9 · UC domain expert · AI learner-builder  
 **Baseline:** 2026-07-31 · expanded general-audience edition  

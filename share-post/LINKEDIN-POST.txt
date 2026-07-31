@@ -15,8 +15,8 @@ Same safety bar:
 I’m a long-time Cisco/UC engineer learning AI in public.
 If either pack helps even one person, it was worth shipping.
 
-🌿 UC → https://github.com/CYPHER0X9/uc-lab-free-university
-🧠 AI → https://github.com/CYPHER0X9/ai-lab-free-university
+🌿 UC → https://github.com/cipher0x9/uc-lab-free-university
+🧠 AI → https://github.com/cipher0x9/ai-lab-free-university
 🔗 Hub → https://linktr.ee/cyphermonkey
 
 Download zips (no Git needed) in the first comment.

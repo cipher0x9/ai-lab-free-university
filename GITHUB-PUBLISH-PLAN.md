@@ -1,7 +1,7 @@
 # GitHub publish plan
 
 **Public repo:** `ai-lab-free-university`  
-**Account:** https://github.com/CYPHER0X9  
+**Account:** https://github.com/cipher0x9  
 **When:** after `bash scripts/verify_slice.sh` is green and you can teach RTMA cold to a stranger.
 
 ## Pre-publish checklist

@@ -265,7 +265,7 @@ def generate() -> list[dict]:
         ("SIP RFC 3261", "https://datatracker.ietf.org/doc/html/rfc3261", "SIP"),
         ("WebRTC samples", "https://webrtc.github.io/samples/", "Samples"),
         ("Cisco DevNet", "https://developer.cisco.com/", "Cisco APIs"),
-        ("UC Lab Free University", "https://github.com/CYPHER0X9/uc-lab-free-university", "Sibling pack"),
+        ("UC Lab Free University", "https://github.com/cipher0x9/uc-lab-free-university", "Sibling pack"),
         ("Microsoft Graph Teams", "https://learn.microsoft.com/en-us/graph/api/resources/teams-api-overview", "Teams"),
         ("Web Speech API", "https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API", "Browser"),
         ("RTCPeerConnection", "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection", "WebRTC"),
@@ -328,8 +328,8 @@ def generate() -> list[dict]:
 
     # ── Sibling / author / free share ──────────────────────────────────
     free = [
-        ("CYPHER0X9 GitHub", "https://github.com/CYPHER0X9", "Author"),
-        ("UC Lab Free University", "https://github.com/CYPHER0X9/uc-lab-free-university", "Sibling"),
+        ("CYPHER0X9 GitHub", "https://github.com/cipher0x9", "Author"),
+        ("UC Lab Free University", "https://github.com/cipher0x9/uc-lab-free-university", "Sibling"),
         ("Linktree cyphermonkey", "https://linktr.ee/cyphermonkey", "Links"),
         ("MIT License", "https://opensource.org/licenses/MIT", "License"),
         ("Choose a License", "https://choosealicense.com/", "Licenses"),
