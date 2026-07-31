@@ -34,5 +34,3 @@ phase1-golden-slice/**/__pycache__/
 phase1-golden-slice/artifacts/*
 phase1-golden-slice/reports/*
 venv/
-!phase1-golden-slice/artifacts/.gitkeep
-!phase1-golden-slice/reports/.gitkeep
