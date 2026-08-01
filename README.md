@@ -40,6 +40,8 @@ If this helps even one person walk from confusion to calm practice, it was worth
 
 ---
 
+**Public sync:** [PUBLIC-SYNC.md](./PUBLIC-SYNC.md) · **All download links:** [DOWNLOADS.md](./DOWNLOADS.md)
+
 ## Get it in 60 seconds
 
 ### ⭐ Download the campus zip

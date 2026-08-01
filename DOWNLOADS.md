@@ -1,70 +1,57 @@
-# Downloads & clone (AI Lab Free University)
+# Downloads — AI Lab Free University
 
-**Linktree hub:** https://linktr.ee/cyphermonkey  
-**How-to (full):** [HOW-TO-GET.md](./HOW-TO-GET.md) · **Siblings:** [SIBLINGS.md](./SIBLINGS.md)
+**Latest public release:** `v4.1-mobile`  
+**Hub:** https://linktr.ee/cyphermonkey  
 
-Everything here is **free** for learning. Educational only — no warranty.
+Free for learning · Educational only · MIT · no warranty  
 
 ---
 
-## Recommended (almost everyone)
+## Recommended ⭐
 
-| What | Link |
-|------|------|
-| **Main zip ⭐** | https://github.com/cipher0x9/ai-lab-free-university/releases/download/v4.0-free/v4-PORTFOLIO.html.zip |
-| Release page | https://github.com/cipher0x9/ai-lab-free-university/releases/tag/v4.0-free |
-| Unzipped HTML in repo | [`university/v4-PORTFOLIO.html`](./university/v4-PORTFOLIO.html) |
+| What | Size (approx) | Link |
+|------|----------------|------|
+| **Campus zip** | **~107 KB** zip → ~1.7 MB HTML | https://github.com/cipher0x9/ai-lab-free-university/releases/download/v4.1-mobile/v4-PORTFOLIO.html.zip |
+| Release page | — | https://github.com/cipher0x9/ai-lab-free-university/releases/tag/v4.1-mobile |
+| HTML in repo | ~1.7 MB | [`university/v4-PORTFOLIO.html`](./university/v4-PORTFOLIO.html) |
 
-**Use:** download → unzip → open `v4-PORTFOLIO.html`  
+**Open:** download → unzip → open `v4-PORTFOLIO.html` in **Chrome / Safari / Edge / Firefox** (full browser).  
 Default theme: **Aurora Dream**.
 
----
+### Optional multi-campus pack
 
-## Other free zips (same Release)
-
-| File | Link |
-|------|------|
-| Lifetime campus | https://github.com/cipher0x9/ai-lab-free-university/releases/download/v4.0-free/v3-LIFETIME.html.zip |
-| Compact Phase-1 | https://github.com/cipher0x9/ai-lab-free-university/releases/download/v4.0-free/v1-SLICE.html.zip |
-| Prior v2 | https://github.com/cipher0x9/ai-lab-free-university/releases/download/v4.0-free/v2-UNIVERSITY.html.zip |
+| What | Size | Link |
+|------|------|------|
+| Complete browser pack (v4 + v3 + v1) | ~193 KB | https://github.com/cipher0x9/ai-lab-free-university/releases/download/v4.1-mobile/AI-LAB-COMPLETE-BROWSER-PACK.zip |
 
 ---
 
-## Clone / copy whole repo
+## Phone / desktop
 
-### Git clone
+- **Desktop** = best  
+- **Phone** = full Chrome or Safari only (not in-app browsers)  
+- No API keys required to open the HTML campus  
+
+Full steps: [HOW-TO-GET.md](./HOW-TO-GET.md) · [START-HERE.md](./START-HERE.md)
+
+---
+
+## Clone + optional labs
 
 ```bash
 git clone https://github.com/cipher0x9/ai-lab-free-university.git
 cd ai-lab-free-university
 open university/v4-PORTFOLIO.html
+bash scripts/verify_slice.sh   # optional · Python 3 · no API keys for Phase 1
 ```
-
-### No Git (GitHub UI)
-
-Repo → green **Code** → **Download ZIP** → unzip → open HTML.
-
-### Safe note
-
-Public tree is **small / browser-friendly**. No secrets. No model weights.  
-Huge multi-hundred-MB personal archives are **not** the public free default.
 
 ---
 
-## Sibling UC pack downloads
+## Sibling UC Lab
 
 | What | Link |
 |------|------|
-| UC repo | https://github.com/cipher0x9/uc-lab-free-university |
-| UC main zip ⭐ | https://github.com/cipher0x9/uc-lab-free-university/releases/download/v17.0-free/v17-UNIVERSITY.html.zip |
-| UC how-to | https://github.com/cipher0x9/uc-lab-free-university/blob/main/HOW-TO-GET.md |
-
----
-
-## Support
-
-- Issues on this repo (kind educational questions)  
-- Profile: https://github.com/cipher0x9  
-- Linktree: https://linktr.ee/cyphermonkey  
+| Repo | https://github.com/cipher0x9/uc-lab-free-university |
+| Campus zip (~624 KB) | https://github.com/cipher0x9/uc-lab-free-university/releases/download/v17.1-mobile/v17-UNIVERSITY.html.zip |
 
 Lab safely. Share freely for learning.
