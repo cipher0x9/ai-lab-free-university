@@ -1,24 +1,85 @@
-I built two free offline universities while learning — and I’m sharing both.
+I am not a developer.
 
-🌿 UC Lab Free University
-For voice / collaboration / contact-center engineers who wanted mentorship, multi-vendor clarity, and proof habits (LICC: Leg · ID · Counter · Capture) — not just another cert pack.
+I did not study computer science.
+I spent years in Cisco voice and collaboration.
 
-🧠 AI Lab Free University
-For builders learning local + cloud AI the operator way — agents, evals, Hermes, 425 lessons, 1000+ links, beautiful Aurora campus, optional Python labs with no API keys (RTMA: Run · Trace · Metric · Artifact).
+But I was curious — and I was tired.
 
-Same safety bar:
-• Free · MIT · educational only
-• Browser-friendly offline HTML
-• No secrets · no customer data
-• Open one file and learn
+Tired of asking friends who would not explain clearly.
+Tired of getting laughed at for not knowing what GitHub meant.
+Tired of hearing “it’s not for you.”
 
-I’m a long-time Cisco/UC engineer learning AI in public.
-If either pack helps even one person, it was worth shipping.
+━━━━  So I built it anyway  ━━━━
 
-🌿 UC → https://github.com/cipher0x9/uc-lab-free-university
-🧠 AI → https://github.com/cipher0x9/ai-lab-free-university
-🔗 Hub → https://linktr.ee/cyphermonkey
+Not with a CS degree.
+With PowerShell, a Windows laptop, and stubborn late nights.
 
-Download zips (no Git needed) in the first comment.
+I moved from voice administration to Mac OS, Unified macOS, Tailscale VPN, my own website, my own music, my own Telegram apps, my own training stack, my certifications, my ten-language mastery system — and then: my own AI agent running on Mac Mini.
 
-#UnifiedCommunications #AI #OpenSource #LearningInPublic #ContactCenter #LocalLLM #Agents #FreeLearning #MacMini #Mentorship
+One person. One machine. One patient climb.
+
+I had no mentor.
+I had no inner circle passing cheat codes.
+Every time I asked “what is the difference between a program and a script?” — the answer was either confusion or a joke.
+
+So I started building for the person I used to be.
+
+══════════════════════════
+
+🧠  AI Lab Free University
+
+A free offline university for AI — built for curious practitioners, not CS academics.
+
+Not another paywalled course.
+A full Aurora campus with 425 lessons, 1000+ curated links, runnable Python labs, and a repeatable grammar for real proof.
+
+━━━━  What it teaches  ━━━━
+
+•• Origins · mental models · the AI landscape
+•• Prompt systems + engineering deep-dive
+•• Local lab: Ollama · Python · Mac Mini agent wiring
+•• Cloud APIs · RAG · tool-calling agents
+•• Evals · safety · RTMA proof grammar
+
+   🟦  R · Run       — Did it execute?
+   🟩  T · Trace     — What pathway did it follow?
+   🟧  M · Metric    — How was it measured?
+   🟪  A · Artifact  — What durable output proves the work?
+
+•• Ship + share + capstone (build your own runway)
+
+━━━━  How it works  ━━━━
+
+Phase 1: download a single HTML file, open offline. Zero API keys required.
+Phase 2+: add local Ollama, write Python labs, wire your own AI agent.
+Full build script included — you can regenerate the entire university yourself.
+
+No login. No subscription. No “maybe someday.”
+You open it in a browser.
+
+══════════════════════════
+
+🌿  UC Lab Free University — sibling pack
+
+For voice and Contact Center engineers: multi-vendor campus, LICC proof grammar, 240 sections.
+Separate download from the UC repo.
+
+══════════════════════════
+
+Why build a free university?
+
+Because I know what it feels like to be outside the room.
+Because I built my own training, my own career, and my own AI agent stack — one tool at a time.
+Because the next person staring at a PowerShell window at 3 a.m., wondering if they belong, deserves a clear map and a kind voice.
+
+If you are starting from zero — this is your door.
+If you are a practitioner who never got the theory — here is the structure.
+If you are mid-career and ready for agents — here is your launchpad.
+
+MIT license. Educational. No hype.
+
+Open it, learn, and when you are ready — pass it to someone who is still outside the room.
+
+Links in the first comment. 🌿🧠
+
+#AI #ArtificialIntelligence #Agents #MachineLearning #LocalAI #Ollama #PromptEngineering #SelfTaught #FreeLearning #OpenSource #CareerGrowth #Mentorship
