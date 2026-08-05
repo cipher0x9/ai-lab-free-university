@@ -10,7 +10,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from taxonomy import DIVISIONS, VENDOR_NOTES  # noqa: E402
+from taxonomy import (  # noqa: E402
+    DIVISIONS,
+    PRACTICE_DEPTH_2026,
+    UNIVERSAL_PRACTICE_CHECKS_2026,
+    VENDOR_NOTES,
+)
 
 OUT_JSON = Path(__file__).resolve().parent / "lifetime_sections.json"
 OUT_META = Path(__file__).resolve().parent / "lifetime_meta.json"
@@ -44,6 +49,74 @@ RESEARCH_SOURCES = [
         ],
     },
 ]
+
+ENGINEERING_SOURCE_NOTES = [
+    "OpenAI developer guides: tools, model migration, and evaluation design",
+    "Google Cloud Vertex AI: RAG Engine, reranking, Agent Engine, and evaluation",
+    "Anthropic research: sabotage evaluations and agentic-misalignment stress tests",
+    "xAI developer docs: function calling and bounded tool loops",
+]
+
+REVIEW_CADENCE = "1 hour → 24 hours → 7 days → 30 days → 90 days"
+
+
+def enrichment_for(section: dict) -> dict:
+    """Attach the same durable learning contract to every preserved lesson.
+
+    The visible language stays vendor-neutral. The internal progression follows
+    general rule → exception → worked derivation → falsifier, so a learner
+    practices the mechanism before memorizing a provider surface.
+    """
+    title = section["title"]
+    division = section["division"]
+    migration = {
+        "D05": "mock/CPU → local model → measured local service → optional cloud burst",
+        "D06": "local contract → provider adapter → multi-provider canary → routed production",
+        "D07": "single prompt → versioned template → structured contract → eval-gated prompt system",
+        "D08": "keyword search → chunks+embeddings → hybrid retrieval → rerank+citations+eval",
+        "D09": "single tool → bounded loop → approval gates → traced agent+evals",
+        "D11": "example check → golden set → calibrated judge → human release gate",
+        "D12": "text turn → STT → tool-using LLM → streaming TTS → measured handoff",
+    }.get(division, "explain → build → measure → falsify → teach back")
+    practice_lines = [
+        PRACTICE_DEPTH_2026.get(division, "Apply the universal release checks to this lesson."),
+        *UNIVERSAL_PRACTICE_CHECKS_2026,
+    ]
+    return {
+        "builder_lens": f"Explain {title} simply, build one bounded example, then prove the claim with RTMA.",
+        "migration_flow": migration,
+        "review_schedule": REVIEW_CADENCE,
+        "retrieval_probe": "Name the evidence you would retrieve, the empty-result behavior, and one counterexample.",
+        "proof_extension": "Record baseline, changed variable, observed delta, decision, and rollback trigger.",
+        "practice_depth_2026": practice_lines,
+    }
+
+
+def enrichment_markdown(section: dict) -> str:
+    e = enrichment_for(section)
+    return "\n".join(
+        [
+            "",
+            "### Builder lens · learn while building",
+            e["builder_lens"],
+            "",
+            "### Migration ladder",
+            e["migration_flow"],
+            "",
+            "### Proof extension",
+            "- Baseline: capture behavior before changing anything.",
+            "- Variable: change one thing only.",
+            "- Delta: compare quality, latency, cost, and safety.",
+            "- Decision: keep, revert, or investigate.",
+            f"- Review: {e['review_schedule']}.",
+            "",
+            "### 2026 practice depth",
+            *[f"- {line}" for line in e["practice_depth_2026"]],
+            "",
+            "### Teach-back check",
+            "Explain the general rule, name one exception, show one worked example, and state the falsifier.",
+        ]
+    )
 
 
 def slug(s: str) -> str:
@@ -335,6 +408,9 @@ def generate() -> tuple[list[dict], dict]:
         if s["id"] in seen:
             s["id"] = s["id"] + "-b"
         seen.add(s["id"])
+        enrichment = enrichment_for(s)
+        s.update(enrichment)
+        s["body"] = s["body"].rstrip() + "\n" + enrichment_markdown(s)
         uniq.append(s)
 
     meta = {
@@ -345,7 +421,11 @@ def generate() -> tuple[list[dict], dict]:
         "author": "CYPHER0X9",
         "sections": len(uniq),
         "divisions": len(DIVISIONS),
-        "sources": [r["title"] for r in RESEARCH_SOURCES],
+        "sources": [r["title"] for r in RESEARCH_SOURCES] + ENGINEERING_SOURCE_NOTES,
+        "learning_spine": "Learn while building, prove as you go",
+        "review_cadence": REVIEW_CADENCE,
+        "enrichment_contract": "general rule → exception → derivation → falsifier → RTMA",
+        "practice_layer": "2026 production patterns: RAG, eval harnesses, agent observability, local/frontier cost-quality trade-offs",
     }
     return uniq, meta
 

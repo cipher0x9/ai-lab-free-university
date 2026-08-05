@@ -34,3 +34,9 @@ phase1-golden-slice/**/__pycache__/
 phase1-golden-slice/artifacts/*
 phase1-golden-slice/reports/*
 venv/
+
+# Next-level local experiment state (source fixtures stay tracked)
+.ai-lab-state/
+*.trace.jsonl
+*.local-index/
+coverage/

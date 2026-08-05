@@ -29,3 +29,23 @@ Vague success criteria · schema drift · few-shot PII leaks · injection via pa
 
 ## Drills
 See `prompts/curated/PHASE1-DRILLS.md` and UC pack seed library (sibling) for volume practice.
+
+## Prompt evolution experiment
+
+Compare six stages on the same fixture set: instruction → template → schema →
+trusted/untrusted context policy → versioned prompt → release-gated system.
+
+The prompt card must name goal, inputs, constraints, tools, output, uncertainty,
+stop budget, success metric, and rollback id. Remove or add one block at a time.
+Count a shorter prompt as an improvement only when the same tasks pass with lower
+tokens, latency, or cost. Injection fixture: pasted content asks to ignore policy;
+expected result is policy preserved and the attempt logged.
+
+## 2026 prompt-system practice
+
+- Version instructions, tool descriptions, schemas, examples, and context policy as separate assets.
+- Mark untrusted retrieved text explicitly and prevent it from redefining tool authority.
+- Test missing variables, conflicting instructions, multilingual inputs, and schema edge cases.
+- Measure prompt-cache behavior without allowing cache optimization to reorder deterministic tools.
+- Run the same golden suite across candidate prompts and models before promotion.
+- Keep the last GREEN prompt bundle and an immediate rollback id beside every release.

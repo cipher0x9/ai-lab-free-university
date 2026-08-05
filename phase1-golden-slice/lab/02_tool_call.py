@@ -95,6 +95,8 @@ def main() -> int:
     )
     rtma.set_metric("plan_backend", plan_reply.backend)
     rtma.set_metric("tool_call_count", len(calls))
+    rtma.set_metric("iteration_budget", 1)
+    rtma.note("Tool results remain authoritative; the synthesis may not invent missing fields.")
 
     results = []
     for i, call in enumerate(calls, 1):
@@ -128,6 +130,13 @@ def main() -> int:
     ok = (
         any(r["name"] == "calc" and r["result"].get("ok") for r in results)
         and any(r["name"] == "glossary_lookup" and r["result"].get("ok") for r in results)
+    )
+    rtma.set_decision(
+        baseline="answer without a tool is not trusted for exact arithmetic",
+        changed_variable="route exact facts through typed local tools",
+        observed_delta={"successful_tools": sum(1 for r in results if r["result"].get("ok"))},
+        keep_or_revert="keep tools only while schemas, traces, and assertions pass",
+        rollback_trigger="schema failure, permission denial, timeout, or failed assertion",
     )
     payload = rtma.finish(status="ok" if ok else "fail")
     print()

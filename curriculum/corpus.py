@@ -24,15 +24,49 @@ META = {
 
 
 def S(id_: str, school: str, title: str, level: str, body: str, tags: str = "", green: str = "", interview30: str = "") -> dict:
+    builder_extension = f"""
+
+### Builder lens · learn while building, prove as you go
+
+Explain **{title}** in plain language. Build the smallest safe example. Change one
+variable, compare the before/after result, and keep an RTMA artifact that another
+learner can reproduce.
+
+### Review ladder
+
+Revisit at **1 hour → 24 hours → 7 days → 30 days → 90 days**. At each
+review: state the general rule, name one exception, teach one worked example, and
+write the observation that would falsify your claim.
+
+### Extended proof card
+
+| Field | Capture |
+|-------|---------|
+| Run | Exact command, input, model/fixture version |
+| Trace | Ordered steps, tool calls, approvals, errors |
+| Metric | Quality + latency + cost + safety signal |
+| Artifact | Durable local file and reproduction note |
+
+### 2026 production practice
+
+- Hold the task and evaluator constant while changing one system variable.
+- Compare local and frontier routes on privacy, pass rate, p95, and cost per verified task.
+- Separate retrieval quality from answer quality; test stale, empty, and unauthorized evidence.
+- Trace agent state, tool calls, approvals, corrections, assertions, and stop reason.
+- Combine deterministic checks, calibrated model graders, and named human review.
+- Pin model, prompt, data, index, tool, and policy versions; keep the last GREEN rollback.
+"""
     return {
         "id": id_,
         "school": school,
         "title": title,
         "level": level,
-        "body": body.strip(),
+        "body": body.strip() + builder_extension.rstrip(),
         "tags": tags,
         "green": green,
         "interview30": interview30,
+        "review_schedule": "1h, 24h, 7d, 30d, 90d",
+        "proof_contract": "baseline → one variable → delta → decision → rollback",
     }
 
 

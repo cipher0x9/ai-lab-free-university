@@ -9,6 +9,14 @@
   "sources": [
     "2026 AI engineer skill discourse (public X)",
     "Local vaults on this Mac Mini",
-    "Ecosystem radar"
-  ]
+    "Ecosystem radar",
+    "OpenAI developer guides: tools, model migration, and evaluation design",
+    "Google Cloud Vertex AI: RAG Engine, reranking, Agent Engine, and evaluation",
+    "Anthropic research: sabotage evaluations and agentic-misalignment stress tests",
+    "xAI developer docs: function calling and bounded tool loops"
+  ],
+  "learning_spine": "Learn while building, prove as you go",
+  "review_cadence": "1 hour \u2192 24 hours \u2192 7 days \u2192 30 days \u2192 90 days",
+  "enrichment_contract": "general rule \u2192 exception \u2192 derivation \u2192 falsifier \u2192 RTMA",
+  "practice_layer": "2026 production patterns: RAG, eval harnesses, agent observability, local/frontier cost-quality trade-offs"
 }

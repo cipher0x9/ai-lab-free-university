@@ -33,3 +33,25 @@ Learn how to **share learning work** without leaking secrets or confusing friend
 | **Artifact** | Short HOW-TO note next to the zip |
 
 Be kind. Share freely for learning. Lab safely.
+
+## Release ladder
+
+```text
+local GREEN → rebuilt offline HTML → structural/link checks
+  → Chrome/Safari/Edge/Firefox smoke → clean-room stranger test
+  → human approval → publish → download/read-back → rollback ready
+```
+
+Report SHIPPED only after the artifact exists at the target; report VERIFIED only
+after a fresh consumer path opens it and matches expected bytes/content. A render,
+notification, or draft is not shipment. Include release tag, hash, file size,
+browser matrix, falsifier, and prior-version rollback link.
+
+## 2026 release practice
+
+- Generate a software bill of materials or dependency inventory for runnable packs.
+- Pin build inputs and record artifact hash, size, license, provenance, and verification command.
+- Run secret, unsafe-link, schema, Python, and offline HTML checks before packaging.
+- Test the download in a clean profile with no author cache or local absolute paths.
+- Separate STRUCTURE_COMPLETE, TECHNICALLY_VERIFIED, LEARNER_GREEN, and published state.
+- Keep the prior verified artifact and document one-command or one-click rollback.

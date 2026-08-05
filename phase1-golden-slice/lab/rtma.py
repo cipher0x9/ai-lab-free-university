@@ -18,6 +18,7 @@ from typing import Any
 SLICE_ROOT = Path(__file__).resolve().parents[1]
 ARTIFACTS = SLICE_ROOT / "artifacts"
 REPORTS = SLICE_ROOT / "reports"
+REVIEW_SCHEDULE = ["1h", "24h", "7d", "30d", "90d"]
 
 
 def utc_now() -> str:
@@ -60,6 +61,13 @@ class RTMA:
         self.artifacts: list[str] = []
         self.status = "running"
         self.notes: list[str] = []
+        self.decision: dict[str, Any] = {
+            "baseline": None,
+            "changed_variable": None,
+            "observed_delta": None,
+            "keep_or_revert": None,
+            "rollback_trigger": None,
+        }
 
     def add_trace(self, event: str, **data: Any) -> None:
         self.trace.append({"t": utc_now(), "event": event, **data})
@@ -70,12 +78,19 @@ class RTMA:
     def note(self, msg: str) -> None:
         self.notes.append(msg)
 
+    def set_decision(self, **fields: Any) -> None:
+        """Capture an experiment decision without discarding unset fields."""
+        unknown = set(fields) - set(self.decision)
+        if unknown:
+            raise ValueError(f"unknown decision fields: {sorted(unknown)}")
+        self.decision.update(fields)
+
     def finish(self, status: str = "ok") -> dict[str, Any]:
         elapsed_ms = round((time.perf_counter() - self.started) * 1000, 2)
         self.status = status
         self.metrics.setdefault("elapsed_ms", elapsed_ms)
         payload = {
-            "schema": "ai-lab-free-university/rtma/v1",
+            "schema": "ai-lab-free-university/rtma/v2",
             "lab": self.lab_name,
             "run_id": self.run_id,
             "status": self.status,
@@ -93,6 +108,9 @@ class RTMA:
             "metric": self.metrics,
             "artifact": self.artifacts,
             "notes": self.notes,
+            "decision": self.decision,
+            "review_schedule": REVIEW_SCHEDULE,
+            "teach_back": "Explain the rule, one exception, one worked example, and the falsifier.",
             "falsifier": (
                 "If elapsed_ms is huge, answer is empty, or tool chain is missing — "
                 "do not claim 'model is smart enough'."

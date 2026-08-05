@@ -55,3 +55,22 @@ bash scripts/verify_slice.sh   # optional · Python 3 · no API keys for Phase 1
 | Campus zip (~624 KB) | https://github.com/cipher0x9/uc-lab-free-university/releases/download/v17.1-mobile/v17-UNIVERSITY.html.zip |
 
 Lab safely. Share freely for learning.
+
+---
+
+## Build the next-level candidate locally
+
+The published links above remain the last verified public release. To inspect the
+richer working-tree campus without changing any public release:
+
+```bash
+python3 curriculum/generate_lifetime.py
+python3 curriculum/generate_resources.py
+python3 scripts/build_university_v4.py
+bash scripts/verify_slice.sh
+open university/v4-PORTFOLIO.html
+```
+
+The candidate adds local→cloud→agents/evals migration maps, production RAG,
+tool-loop and voice-latency labs, and 1h→24h→7d→30d→90d review cards.
+Publishing remains a separate human-approved action.

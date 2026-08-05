@@ -50,3 +50,19 @@ https://github.com/cipher0x9/uc-lab-free-university/releases/download/v17.1-mobi
 https://linktr.ee/cyphermonkey  
 
 Be kind. Lab safely. Share freely for learning.
+
+---
+
+## Verify the engineering edition
+
+After cloning, one command now runs the original five labs plus RAG ablation,
+bounded agent correction, voice latency budgeting, HTML/JSON/Python checks,
+offline-dependency checks, local-link checks, and RTMA/brand invariants:
+
+```bash
+bash scripts/verify_slice.sh
+```
+
+Expected final line: `FREE PACK VERIFY COMPLETE`. Open generated artifacts under
+`phase1-golden-slice/artifacts/` and reports under `phase1-golden-slice/reports/`.
+Those local run outputs are ignored by git; the lab code and fixtures are public.

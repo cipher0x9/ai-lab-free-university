@@ -18,6 +18,7 @@ from typing import Any
 
 DEFAULT_HOST = os.environ.get("OLLAMA_HOST", "http://127.0.0.1:11434").rstrip("/")
 DEFAULT_MODEL = os.environ.get("OLLAMA_MODEL", "llama3.2:3b")
+BACKEND_DECISION_FIELDS = ("privacy", "task_pass_rate", "p50_ms", "p95_ms", "cost_per_passed_task", "fallback")
 
 
 @dataclass
@@ -28,6 +29,17 @@ class BrainReply:
     latency_ms: float
     raw: dict[str, Any] | None = None
     error: str | None = None
+
+    def scorecard(self) -> dict[str, Any]:
+        """Small provider-neutral record for later local/cloud comparisons."""
+        return {
+            "backend": self.backend,
+            "model": self.model,
+            "latency_ms": self.latency_ms,
+            "answer_chars": len(self.text or ""),
+            "has_error": self.error is not None,
+            "required_decision_fields": BACKEND_DECISION_FIELDS,
+        }
 
 
 def ollama_alive(host: str = DEFAULT_HOST, timeout: float = 1.5) -> bool:
@@ -72,6 +84,16 @@ def _mock_reply(prompt: str, model: str) -> BrainReply:
         text = (
             "A token is a chunk of text the model reads or writes — "
             "not always a full word. Context window is the token budget for one request."
+        )
+    elif "rag" in p or "retrieval" in p:
+        text = (
+            "RAG retrieves approved evidence before generation, carries resolvable citations, "
+            "scores retrieval separately, and fails closed when no evidence is found."
+        )
+    elif "agent" in p or "approval" in p:
+        text = (
+            "A safe agent is a bounded observe-act-correct-verify loop with typed tools, "
+            "hard budgets, traceable approvals, assertions, and an explicit stop reason."
         )
     elif "hello" in p or "ping" in p or "say" in p:
         text = (

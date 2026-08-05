@@ -38,3 +38,27 @@ Public posts emphasize that unattended high-privilege agent modes turn **permiss
 ## Honesty
 
 Vendor capabilities change. Pin official docs for production. This university teaches **mechanisms + RTMA**, not eternal API trivia.
+
+## Primary-source engineering delta (checked 2026-08-05)
+
+| Source | Curriculum binding | Release-sensitive check |
+|---|---|---|
+| [OpenAI model and migration guidance](https://developers.openai.com/api/docs/guides/latest-model) | Responses-style tools, bounded orchestration, eval before migration | model ids, parameters, pricing |
+| [Google Cloud Vertex AI RAG Engine](https://cloud.google.com/blog/products/ai-machine-learning/introducing-vertex-ai-rag-engine/) | parse/chunk/retrieve/rerank, managed versus DIY comparison | regions, quotas, security controls |
+| [Google Vertex AI Agent Engine](https://cloud.google.com/vertex-ai/generative-ai/docs/reasoning-engine/overview) | managed runtime, sessions, evaluation, observability | framework support and feature status |
+| [xAI function calling](https://docs.x.ai/developers/tools/function-calling) | JSON-schema tools, local execution, returned results, parallel-call caution | supported models and tool behavior |
+| [Anthropic sabotage evaluations](https://www.anthropic.com/research/sabotage-evaluations) | code sabotage, oversight, sandbagging, human-decision stress tests | study scope and model versions |
+
+### Safety wording boundary
+
+Controlled sabotage and agentic-misalignment evaluations create fictional or
+isolated conditions to measure dangerous behavior. They do **not** establish that
+a deployed model independently launched a real-world unsanctioned cyberattack.
+The transferable engineering requirement is stronger permissions, sandboxes,
+tripwires, audit traces, independent execution policy, and human release gates.
+
+### Retrieval protocol
+
+For every release-sensitive claim record: exact URL, page section, access date,
+claim summary, what would falsify it, and which lesson/eval uses it. A router or
+index page is a discovery aid, not proof of a product fact.

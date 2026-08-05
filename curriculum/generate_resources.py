@@ -803,9 +803,32 @@ def generate() -> list[dict]:
             )
         )
 
+    # Additive 2026 primary anchors after the preserved 1050-record catalog so
+    # existing resource ids remain stable.
+    latest_practice = [
+        ("MCP architecture", "https://modelcontextprotocol.io/docs/learn/architecture", "Protocol layers and capabilities"),
+        ("MCP specification 2025-06-18", "https://modelcontextprotocol.io/specification/2025-06-18/index", "Authoritative protocol contract"),
+        ("OpenAI Evals API", "https://platform.openai.com/docs/api-reference/evals", "Evaluation runs and graders"),
+        ("NIST Generative AI Profile", "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence", "Lifecycle risk and evaluation"),
+        ("Google AI Edge", "https://ai.google.dev/edge", "On-device model deployment"),
+        ("Google Quantum AI", "https://quantumai.google/", "Quantum research and error-correction signals"),
+    ]
+    for title, url, note in latest_practice:
+        uniq.append(L("Future Practice 2026", title, url, note, "future official primary"))
+
     # assign ids
     for idx, x in enumerate(uniq, 1):
         x["id"] = f"R{idx:04d}"
+        x["proof_use"] = "Open the source, record the access date, bind one claim, and write one falsifier."
+        x["freshness"] = "Release-sensitive: verify the current official page before production use."
+        x["rtma"] = "Run: open · Trace: URL+section · Metric: claim coverage · Artifact: dated source note"
+        x["practice_checks"] = [
+            "Bind one implementation claim to the exact page and section.",
+            "Record access date, version or revision, and release sensitivity.",
+            "Name the privacy, permission, or execution boundary affected.",
+            "Compare the guidance against one local or alternative implementation.",
+            "Keep one falsifier and one rollback or safe-degradation decision.",
+        ]
 
     return uniq
 

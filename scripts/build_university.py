@@ -17,6 +17,11 @@ from corpus import META, SCHOOLS, SECTIONS, stats  # noqa: E402
 
 OUT = ROOT / "university" / "v2-UNIVERSITY.html"
 
+NEXT_LEVEL_SPINE = (
+    "Learn while building · prove as you go · local → cloud → agents/evals · "
+    "review at 1h → 24h → 7d → 30d → 90d"
+)
+
 
 def esc(s: str) -> str:
     return html.escape(s, quote=True)
@@ -140,7 +145,7 @@ def build() -> Path:
   <div class="meta"><span class="id">{esc(s["id"])}</span><span class="school">{esc(s["school"])} · {esc(school_name.get(s["school"],""))}</span><span class="lvl">{esc(s["level"])}</span></div>
   <h2>{esc(s["title"])}</h2>
   <div class="body">{body_to_html(s["body"])}</div>
-  {green}{iv}
+{green}{iv}
   <div class="sec-actions"><button type="button" class="btn mark" data-mark="{esc(s["id"])}">Mark studied</button><button type="button" class="btn copy" data-copy="{esc(s["id"])}">Copy id</button></div>
 </article>'''
         )
@@ -157,6 +162,7 @@ def build() -> Path:
         "stats": st,
         "schools": SCHOOLS,
         "section_ids": [s["id"] for s in SECTIONS],
+        "next_level_spine": NEXT_LEVEL_SPINE,
     }
 
     doc = f"""<!DOCTYPE html>
@@ -164,6 +170,7 @@ def build() -> Path:
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='14' width='64' height='64' fill='%236366F1'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-size='38'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E"/>
 <meta name="description" content="{esc(META['title'])} {esc(META['version'])} — {esc(META['tagline'])}. Free offline AI university."/>
 <meta name="color-scheme" content="light dark"/>
 <title>{esc(META['title'])} {esc(META['version'])} — Offline Free University</title>
@@ -175,6 +182,7 @@ def build() -> Path:
   --font:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
   --display:Georgia,"Times New Roman",serif;--mono:ui-monospace,Menlo,Consolas,monospace;
 }}
+@media print{{article.sec{{break-inside:avoid;counter-increment:page}}article.sec::after{{content:"AI Lab · page " counter(page);color:#6366F1;font-size:10px}}}}
 html[data-theme=warm]{{--bg:#FFF6EB;--card:#fff;--ink:#1A1208;--muted:#7A6548;--line:#F0D4B0;--border:#E8C9A0;--a1:#E8820C;--a2:#8B5CF6;--a3:#159947;--a4:#E11D48;--shadow:0 8px 28px rgba(26,18,8,.08)}}
 html[data-theme=cobalt]{{--bg:#061422;--card:#0c2740;--ink:#E8F3FF;--muted:#8EB6D4;--line:#1a4568;--border:#1e4a6a;--a1:#38BDF8;--a2:#60A5FA;--a3:#2DD4BF}}
 html[data-theme=forest]{{--bg:#F2F7F1;--card:#fff;--ink:#14201A;--muted:#5B6E62;--line:#C9D9CE;--border:#C9D9CE;--a1:#2F6F4E;--a2:#3F8F62;--a3:#0F9B8E;--shadow:0 8px 24px rgba(20,32,26,.08)}}

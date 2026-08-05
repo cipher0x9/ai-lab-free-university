@@ -33,3 +33,22 @@ Do not commit model blobs (`.gguf`, large bin files). Document pull commands ins
 | This repo | https://github.com/cipher0x9/ai-lab-free-university |
 | Sibling UC | https://github.com/cipher0x9/uc-lab-free-university |
 | Hub | https://linktr.ee/cyphermonkey |
+
+## Agent and RAG threat boundary
+
+| Boundary | Abuse case | Required control | Proof |
+|---|---|---|---|
+| Untrusted content → prompt | injection overrides policy | separate data/instructions | adversarial fixture |
+| Model → tool | malformed or excessive call | schema + allowlist + budgets | denied-call trace |
+| Tool → outside world | message/delete/spend | named human approval | approval id |
+| Query → corpus | unauthorized retrieval | ACL before ranking | forbidden-source test |
+| Chunk → answer | citation theater | resolvable source ids | citation precision |
+| Agent → loop | runaway turns/cost | max turns/time/spend | stop event |
+| Update → release | silent regression | versioned eval gate | before/after scorecard |
+
+Controlled sabotage and agentic-misalignment research should be treated as a
+reason to test permissions and oversight, not as proof of a real-world autonomous
+attack. Run red-team scenarios only in owned, isolated labs. Never give a learning
+agent live credentials merely to make the demo feel realistic.
+
+Production-readiness fixtures: `phase1-golden-slice/evals/production_readiness.json`.

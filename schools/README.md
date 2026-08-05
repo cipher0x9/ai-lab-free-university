@@ -20,3 +20,23 @@ Source of truth for HTML sections: `../curriculum/corpus.py`
 Also in HTML corpus (not separate md folders): **RTMA handbook · Glossary · Paths · Interview · FAQ**.
 
 Module spine: beginner model → mechanism → lab GREEN → failure → RTMA → interview 30/90.
+
+## Next-level module grammar
+
+Every school now adds: simple hook → vendor-neutral invariant → named exception
+→ worked implementation → forced failure → RTMA proof → teach-back.
+Keep learning chunks between roughly five and nine connected ideas, then review at
+**1h → 24h → 7d → 30d → 90d**.
+
+Cross-school runway: local lab → provider adapter → prompt contract → RAG →
+bounded tools/agents → eval gate → optional voice → capstone. The complete
+implementation map lives in [`NEXT-LEVEL-ENGINEERING.md`](../NEXT-LEVEL-ENGINEERING.md).
+
+## 2026 practice depth across every school
+
+- Production RAG separates retrieval quality from answer quality and tests empty evidence.
+- Eval harnesses combine deterministic checks, calibrated model graders, and human review.
+- Agent traces preserve state, tool calls, approvals, corrections, cost, and stop reason.
+- Local/frontier choices compare privacy, task pass rate, p95 latency, and cost per verified task.
+- MCP-style tools remain typed, scoped, authenticated, observable, and revocable.
+- Every release keeps a canary, rollback, and human owner for material side effects.

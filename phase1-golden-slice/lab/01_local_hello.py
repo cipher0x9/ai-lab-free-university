@@ -60,6 +60,13 @@ def main() -> int:
     rtma.set_metric("backend", reply.backend)
     rtma.set_metric("latency_ms", reply.latency_ms)
     rtma.set_metric("answer_chars", len(reply.text or ""))
+    rtma.set_decision(
+        baseline="deterministic mock is the always-available classroom baseline",
+        changed_variable="use local Ollama when reachable",
+        observed_delta={"backend": reply.backend, "latency_ms": reply.latency_ms},
+        keep_or_revert="keep the observed backend only for claims its eval suite supports",
+        rollback_trigger="empty answer, failed health probe, or unacceptable latency",
+    )
 
     print()
     print(f"Backend : {reply.backend}  ({reply.model})")
@@ -75,6 +82,7 @@ def main() -> int:
     print()
     print(f"Artifact: {payload['artifact'][-1]}")
     print("GREEN if: you can restate RTMA in your own words + open the JSON artifact.")
+    print("REVIEW: teach it again at 1h, 24h, 7d, 30d, and 90d.")
     return 0 if ok else 1
 
 

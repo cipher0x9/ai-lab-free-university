@@ -23,6 +23,8 @@ sections, meta = generate()
 
 OUT = ROOT / "university" / "v3-LIFETIME.html"
 
+ENGINEERING_RUNWAY = "local lab → provider adapter → tool loop → retrieval → eval gate → human-approved release"
+
 
 def esc(s: str) -> str:
     return html.escape(s or "", quote=True)
@@ -363,6 +365,7 @@ def build() -> tuple[Path, int]:
         "<!DOCTYPE html>\n<html lang=\"en\" data-theme=\"night\">\n<head>\n"
         "<meta charset=\"UTF-8\"/>\n"
         "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1,viewport-fit=cover\"/>\n"
+        "<link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='14' width='64' height='64' fill='%236366F1'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-size='38'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E\"/>\n"
         f"<meta name=\"description\" content=\"{esc(meta['title'])} {esc(meta['version'])} — {esc(meta['tagline'])}\"/>\n"
         f"<title>{esc(meta['title'])} {esc(meta['version'])} — Lifetime Mastery</title>\n"
         f"<style>\n{CSS}\n</style>\n</head>\n<body>\n"
@@ -390,6 +393,7 @@ def build() -> tuple[Path, int]:
         "<div style=\"font-size:11px;font-weight:900;color:var(--a3);letter-spacing:.08em\">GENERAL AUDIENCE · FULL-SCALE · LIFETIME</div>\n"
         f"<h1>{esc(meta['tagline'])}</h1>\n"
         f"<p>{esc(meta['subtitle'])}. Built from local Mac Mini vaults (Agentic AI University, DevOps AI, Google AI Arsenal, UC prompt labs, Hermes wiring) + 2026 public AI-engineering roadmaps + ecosystem radar (agents, MCP, Hermes, robotics/physical AI).</p>\n"
+        f"<p><strong>Engineering runway:</strong> {esc(ENGINEERING_RUNWAY)}. Review at 1h → 24h → 7d → 30d → 90d.</p>\n"
         "<div class=\"stats\">\n"
         f"<div class=\"stat\"><b>{n}</b><span>Lessons</span></div>\n"
         f"<div class=\"stat\"><b>{len(div_order)}</b><span>Divisions</span></div>\n"

@@ -20,6 +20,12 @@ python3 lab/04_rtma_quiz.py
 echo
 python3 lab/05_run_eval_expanded.py
 echo
+python3 lab/06_rag_ablation.py
+echo
+python3 lab/07_agent_loop.py
+echo
+python3 lab/08_voice_latency_budget.py
+echo
 
 # Rebuild universities
 if [[ -f "$ROOT/scripts/build_university_v4.py" ]]; then
@@ -88,6 +94,15 @@ for req in README.md START-HERE.md VISION.md LICENSE CONTRIBUTING.md SECURITY.md
   fi
 done
 echo "✓ public surface files present"
+
+# Repository-wide gates: syntax, JSON, HTML balance, local links, offline
+# dependencies, English public surface, brand/proof invariants, and byte growth.
+VERIFY_ARGS=()
+if [[ -f /tmp/ai-lab-before-sizes.txt ]]; then
+  VERIFY_ARGS+=(--before-sizes /tmp/ai-lab-before-sizes.txt)
+fi
+python3 "$ROOT/scripts/verify_repo.py" "${VERIFY_ARGS[@]}"
+echo "✓ repository-wide structural and growth gates"
 
 echo
 echo "✓ FREE PACK VERIFY COMPLETE"

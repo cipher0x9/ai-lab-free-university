@@ -29,3 +29,22 @@
 ## Interview 30 / 90
 **30s:** Models predict tokens; fluency isn’t truth; I use RTMA and evals.  
 **90s:** Context is a budget. Low temperature for scored work. Tools and citations fight hallucinations. Artifacts make incidents reviewable.
+
+## Stack map and debugging test
+
+Trace one answer through seven layers: data → representation/tokens → model →
+context → tools/retrieval → product policy → human decision. For each layer,
+name the object, property, relation, event, and evidence. This prevents “the model
+is wrong” from hiding a bad source, truncated context, tool error, or UI claim.
+
+Debugging rule: a reason without an observable consequence is only a hypothesis.
+Force one context-overflow or unsupported-claim fixture and capture where the chain breaks.
+
+## 2026 mental-model practice
+
+- Separate capability, reliability, calibration, and product policy; one score cannot represent all four.
+- Compare probability-shaped fluency with evidence-grounded correctness on the same fixture.
+- Trace context assembly so missing, stale, injected, and truncated evidence become distinct failures.
+- Measure structured-output validity separately from semantic task success.
+- Treat tool and retrieval results as data with provenance, not automatically trusted truth.
+- Update the model only after the trace identifies which layer actually failed.

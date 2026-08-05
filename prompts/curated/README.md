@@ -19,3 +19,14 @@ In the UC free share pack (sibling folder):
 - `NEW-SESSION-VISION-HANDOFF.md`  
 
 **Rule:** never delete that tree; AI Lab Free University may copy seeds later into releases.
+
+## Prompt-system contract
+
+Each new prompt should declare: goal, trusted inputs, untrusted inputs,
+constraints, tool schemas, approval class, output schema, uncertainty behavior,
+stop budget, evaluator, and rollback id. Version the contract beside the eval
+result. Change one variable, rerun the same suite, and retain failed candidates as
+learning evidence when safe.
+
+Evolution: instruction → template → structured contract → context policy →
+versioned suite → release gate.

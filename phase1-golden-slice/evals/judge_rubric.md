@@ -27,3 +27,18 @@ Use this when a human (or future LLM judge) reviews free-form answers.
 - Citation required for UC RAG answers  
 - Cost + latency budgets per item  
 - Red-team injection items in separate suite  
+
+## Calibrated judge extension
+
+For meaning-based tasks after Phase 1:
+
+1. Freeze a held-out set with two human labels per item.
+2. Blind candidate identity and order.
+3. Give the judge an observable rubric, not “is this good?”
+4. Record judge model/version, prompt id, temperature, raw score, and rationale.
+5. Measure exact agreement and inspect every high-risk disagreement.
+6. Keep deterministic schema, citation, permission, and budget checks authoritative.
+7. A named human owns release when impact or ambiguity is material.
+
+Judge output is another trace event. It cannot approve its own side effects or
+silently replace the golden reference.

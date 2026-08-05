@@ -34,3 +34,28 @@ Flight simulator. Disclose it. Do not claim production from mock-only.
 ## Interview 30 / 90
 **30s:** Local models for privacy/practice; measure latency; weights stay out of git.  
 **90s:** Ollama path on 11434; mock fallback so learning never blocks; catalog policy for daily vs heavy models.
+
+## Local → frontier decision lab
+
+Run the same 10 tasks against deterministic mock, one local model, and—only when
+you choose to configure it—one cloud adapter. Keep the prompt and grader fixed.
+
+| Capture | Why |
+|---|---|
+| task pass rate | capability on your work |
+| warm/cold p50 and p95 | experience and capacity |
+| tokens or local runtime | comparable workload |
+| cost per passed task | useful economics |
+| data boundary | privacy decision |
+
+Route locally when it meets the bar; burst to frontier capability only for the
+measured gap. Keep local fallback and never commit weights or populated env files.
+
+## 2026 local-runtime practice
+
+- Pin model artifact, quantization, tokenizer, context setting, and runtime version in Trace.
+- Measure warm-up separately from steady-state tokens/second and end-to-end p95.
+- Watch memory pressure, thermal behavior, power, and concurrent-request degradation.
+- Test structured output and tool-call reliability; chat quality alone is insufficient.
+- Keep private fixtures local and document every later cloud boundary explicitly.
+- Promote a local route only when task pass rate meets the same golden threshold as cloud.

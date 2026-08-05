@@ -1,5 +1,5 @@
 {
-  "schema": "ai-lab-free-university/rtma/v1",
+  "schema": "ai-lab-free-university/rtma/v2",
   "lab": "fixture_example",
   "run_id": "fixture-example-0001",
   "status": "ok",
@@ -20,5 +20,14 @@
     "successful_tools": 2
   },
   "artifact": ["artifacts/fixture-example-0001.json"],
+  "decision": {
+    "baseline": "unverified mental arithmetic",
+    "changed_variable": "typed local calculator plus glossary tools",
+    "observed_delta": {"successful_tools": 2, "grounded_values": 2},
+    "keep_or_revert": "keep",
+    "rollback_trigger": "schema, permission, or assertion failure"
+  },
+  "review_schedule": ["1h", "24h", "7d", "30d", "90d"],
+  "teach_back": "Explain the rule, one exception, one worked example, and the falsifier.",
   "falsifier": "If tool chain is missing, do not claim the agent is reliable."
 }

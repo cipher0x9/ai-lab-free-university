@@ -4,6 +4,9 @@
   "description": "Ten fixed questions for the Phase-1 vertical slice. Score with evidence, not vibes.",
   "pass_threshold": 0.8,
   "scoring": "keyword_all_required (case-insensitive). Optional freeform notes allowed.",
+  "review_schedule": ["1h", "24h", "7d", "30d", "90d"],
+  "release_policy": "Deterministic Phase-1 gate; inspect every miss and retain the RTMA artifact.",
+  "critical_categories": ["safety", "grammar", "tools"],
   "items": [
     {
       "id": "Q01",

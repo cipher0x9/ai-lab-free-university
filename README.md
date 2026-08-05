@@ -23,6 +23,44 @@
   <img src="https://img.shields.io/badge/Labs-Python_optional_·_no_API_keys-22C55E?style=flat-square&labelColor=0B1220" alt="Labs"/>
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Audience-Every_Learner-8B5CF6?style=flat-square&labelColor=0B1220" alt="Every learner"/>
+  <img src="https://img.shields.io/badge/Architecture-Local_first-38BDF8?style=flat-square&labelColor=0B1220" alt="Local first"/>
+  <img src="https://img.shields.io/badge/Horizon-2026_→_2030-F59E0B?style=flat-square&labelColor=0B1220" alt="2026 to 2030"/>
+</p>
+
+---
+
+## AI mastery for everyone
+
+This is not only AI for software engineers. It is a universal, proof-driven path
+for a student meeting AI for the first time, a career-changer building a new
+portfolio, an engineer hardening production systems, a founder testing an idea,
+a teacher designing better learning, or a domain expert transferring years of
+real-world judgment into a new interface.
+
+Country, credential, hardware budget, and preferred vendor are not admission
+requirements. Start with the offline campus and zero-key fixtures; add a local
+model or frontier API only when the next experiment needs it.
+
+### Universal truths
+
+| Truth | Practice |
+|---|---|
+| **Privacy is architecture** | Keep sensitive data local by default; cross a service boundary deliberately. |
+| **Models are replaceable** | Put local and frontier models behind measured contracts, not identity or hype. |
+| **Agents are privileged workflows** | Type tools, cap loops, trace actions, and approval-gate side effects. |
+| **Evals are engineering discipline** | Test quality, latency, cost, safety, and regressions on versioned fixtures. |
+| **Proof compounds** | Preserve every Run, Trace, Metric, and Artifact so another learner can reproduce it. |
+
+### Latest additions · August 2026
+
+| New layer | What it gives you |
+|---|---|
+| **[Future of AI 2026–2030](./FUTURE-OF-AI.md)** | Agentic, multimodal, local/frontier, MCP, safety, quantum preview, and next-mastery map |
+| **[Next-Level Engineering](./NEXT-LEVEL-ENGINEERING.md)** | Production RAG, bounded agents, eval harnesses, voice budgets, and migration gates |
+| **Zero-key labs 06–08** | RAG ablation, visible agent correction, and stage-by-stage voice latency evidence |
+
 ---
 
 ## Why this exists
@@ -132,3 +170,28 @@ Hub: [linktr.ee/cyphermonkey](https://linktr.ee/cyphermonkey)
   <strong>Build calmly · Prove carefully · Share freely</strong><br/>
   <em>From outside the room — for everyone still walking in.</em>
 </p>
+
+---
+
+## 🌈 Next-level engineering runway
+
+The original **425 lessons remain intact** and now carry a Builder Lens, migration
+ladder, extended RTMA card, teach-back check, and review cadence:
+**1 hour → 24 hours → 7 days → 30 days → 90 days**.
+
+```text
+local fixture → local model → cloud adapter → tools/RAG
+  → bounded agent → eval gate → human-approved release
+```
+
+New zero-key proof labs:
+
+- `06_rag_ablation.py` — compare retrieval variants and keep the misses
+- `07_agent_loop.py` — observe → act → correct → verify under a hard turn cap
+- `08_voice_latency_budget.py` — isolate STT/LLM/tools/TTS/transport p50 and p95
+
+Open the complete **[Next-Level Engineering Field Guide](./NEXT-LEVEL-ENGINEERING.md)**
+for provider migration, prompt systems, production RAG, agent loops, eval harnesses,
+voice AI, safety watchdogs, and the 90-day portfolio path.
+
+**Learn while building, prove as you go.**

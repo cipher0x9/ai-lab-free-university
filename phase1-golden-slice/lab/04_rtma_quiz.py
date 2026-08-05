@@ -35,6 +35,13 @@ QUESTIONS = [
     },
 ]
 
+REVIEW_PROMPTS = [
+    "State the general rule without notes.",
+    "Name one exception or failure mode.",
+    "Walk one real input through the mechanism.",
+    "Open the artifact and state the falsifier.",
+]
+
 
 def main() -> int:
     print_rtma_banner("Lab 04 · RTMA self-check quiz")
@@ -77,12 +84,15 @@ def main() -> int:
     rtma.set_metric("total", total)
     rtma.set_metric("pass_rate", round(rate, 4))
     rtma.set_metric("interactive", interactive)
+    rtma.set_metric("review_schedule", ["1h", "24h", "7d", "30d", "90d"])
+    rtma.note("Next review prompts: " + " | ".join(REVIEW_PROMPTS))
     suite_ok = rate >= 1.0 if interactive else rate >= 1.0
     # require all 5
     payload = rtma.finish(status="ok" if passed == total else "fail")
     print(f"Score: {passed}/{total}")
     print(f"Artifact: {payload['artifact'][-1]}")
     print("GREEN if: all five correct without peeking at notes.")
+    print("TEACH-BACK: rule → exception → worked example → falsifier.")
     return 0 if passed == total else 1
 
 

@@ -17,3 +17,19 @@ bash scripts/verify_slice.sh
 7. Be kind. Free for learning.
 
 Questions: open an issue on the public repo when published (`ai-lab-free-university`).
+
+## Engineering contribution gate
+
+Keep every contribution additive and evidence-bearing:
+
+1. Preserve existing lesson IDs, paths, and public wording unless fixing a proven defect.
+2. Add the vendor-neutral mechanism before provider-specific instructions.
+3. Include a failure fixture, falsifier, RTMA fields, and rollback note.
+4. For prompt/model/index changes, compare the same golden set before and after.
+5. Keep the public surface English-only and every runtime dependency offline-safe.
+6. Run `bash scripts/verify_slice.sh`; include the exact GREEN/RED evidence in review.
+
+Useful additions include small zero-key labs, synthetic eval fixtures, retrieval
+ablations, approval-boundary tests, and diagrams that make a real data path clearer.
+Do not add secrets, customer data, copied private chats, model weights, generated
+run artifacts, or autonomous external actions.

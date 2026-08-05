@@ -25,3 +25,16 @@ RTMA handbook fully → golden slice → 01/02/06/08 → School 07 → plan UC c
 ## Rule
 
 Do not claim mastery of later schools without Phase 1 GREEN evidence.
+
+## 90-day engineering overlays
+
+| Overlay | Add after your base path | Portfolio proof |
+|---|---|---|
+| Local → cloud | adapter contract + same golden set | quality/latency/cost scorecard |
+| RAG | Lab 06 + 20 citation questions | ablation + empty-result trace |
+| Agent | Lab 07 + one read-only domain tool | correction + hard-stop trace |
+| Voice | Lab 08 + consented audio fixture | stage p50/p95 + handoff drill |
+| Safety | production-readiness probes | denied actions + rollback test |
+
+Whichever path you choose, review hard ideas at 1h, 24h, 7d, 30d, and 90d.
+The destination is a stranger-runnable capstone, not a completion percentage.

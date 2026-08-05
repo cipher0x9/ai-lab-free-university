@@ -69,3 +69,16 @@ That is intentional teaching: RTMA does not require cloud keys.
 | **T**race | events / tool chain |
 | **M**etric | ms, pass_rate, counts |
 | **A**rtifact | files under `artifacts/` + `reports/` |
+
+## Extended proof runway
+
+| Lab | Mechanism | Forced failure | Durable proof |
+|---|---|---|---|
+| 06 | retrieval + reranking ablation | wrong-neighbor risk | hit-rate delta report |
+| 07 | observe→act→correct→verify | invalid first tool input | bounded transition trace |
+| 08 | voice stage budget | tail latency | p50/p95 budget report |
+
+These remain standard-library Python with synthetic local fixtures and zero API
+keys. Replace fixtures with owned measurements only after the mechanism is GREEN;
+label fixture-derived metrics honestly. Full architecture:
+[`NEXT-LEVEL-ENGINEERING.md`](../NEXT-LEVEL-ENGINEERING.md).

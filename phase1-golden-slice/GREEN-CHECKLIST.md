@@ -44,3 +44,17 @@ Feeling busy ≠ GREEN.
 **GREEN means:** path works, RTMA is teachable, artifacts exist, you could onboard a stranger.
 
 **Not GREEN if:** only watched someone else run it, or cannot open an artifact.
+
+## NEXT-LEVEL GREEN
+
+- [ ] Lab 06 compares at least two retrieval variants and writes the misses
+- [ ] Lab 07 records a real correction and stops within its iteration budget
+- [ ] Lab 08 reports p50/p95 per voice stage and labels fixture data
+- [ ] `production_readiness.json` is readable and its human release owner is named
+- [ ] One local→cloud decision uses the same tasks and measures quality/latency/cost
+- [ ] One empty-retrieval test fails closed
+- [ ] One denied side-effect test records the policy decision
+- [ ] The rollback trigger is written before any release rehearsal
+- [ ] Review reminders exist for 1h, 24h, 7d, 30d, and 90d
+
+GREEN means reproducible evidence, not a successful screenshot.

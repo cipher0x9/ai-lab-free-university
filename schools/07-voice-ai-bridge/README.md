@@ -31,3 +31,25 @@ Contact-center AI involves law, consent, PCI/PII, workforce rules. This pack is 
 ## Interview 30 / 90
 **30s:** I budget STT/LLM/TTS latency and separate media faults from model faults.  
 **90s:** Domain vocabulary transfers. Prove text+citations before voice. Production needs legal/vendor rails.
+
+## Measured voice path
+
+```text
+capture/VAD → STT partial/final → dialog → LLM/tools
+  → TTS first audio → transport → barge-in/human handoff
+```
+
+Budget and report p50/p95 for each stage; pair latency with transcription/domain
+accuracy and handoff success. Inject noise, jargon, tool timeout, long synthesis,
+and transport impairment separately. Never use one total-turn average to hide the
+slow leg. Run `lab/08_voice_latency_budget.py` with fixtures, then replace them
+with consented measurements and label the difference.
+
+## 2026 multimodal practice
+
+- Correlate audio turn, transcript, model/tool trace, synthesis, transport, and handoff ids.
+- Measure time-to-first-partial, final transcript, first token, first audio, and interruption stop.
+- Slice accuracy by language, accent, domain term, noise condition, and device path.
+- Preserve “unclear input” uncertainty instead of converting it into a confident action.
+- Test barge-in, double-talk, tool delay, reconnect, and safe human handoff independently.
+- Minimize recordings, capture consent, redact PII, and provide text/caption fallback.

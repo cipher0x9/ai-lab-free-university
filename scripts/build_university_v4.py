@@ -18,6 +18,12 @@ from generate_resources import generate as gen_links  # noqa: E402
 
 OUT = ROOT / "university" / "v4-PORTFOLIO.html"
 
+ENGINEERING_RUNWAYS = (
+    "Local fixture → local model → cloud adapter → tools/RAG → eval gate → human-approved release",
+    "Keyword → chunking/embeddings → hybrid retrieval → reranking → citation and empty-result evals",
+    "Text → STT → LLM/tools → streaming TTS → stage p50/p95 → human handoff",
+)
+
 DIV_EMOJI = {
     "D00": "🏛️", "D01": "🧱", "D02": "🗣️", "D03": "📊", "D04": "🧠",
     "D05": "🖥️", "D06": "☁️", "D07": "✍️", "D08": "📚", "D09": "🤖",
@@ -344,13 +350,23 @@ th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vert
 @media (max-width:900px){
   html,body{overflow:auto}
   .app{display:block;height:auto}
-  .top{position:sticky;top:0}
+  .top{position:sticky;top:0;flex-wrap:wrap;height:auto;padding:10px 12px;overflow:hidden}
+  .brand{min-width:0;flex:1 1 220px}
+  .brand h1{font-size:1.12rem}
+  .search{order:3;flex:1 1 100%;max-width:none;min-width:0}
+  .top-actions{order:4;width:100%;margin-left:0;flex-wrap:wrap}
+  .top-actions select.sel{min-width:0;flex:1 1 150px}
   .rail{display:flex;flex-direction:row;overflow:auto;border-right:0;border-bottom:1px solid var(--border);padding:8px}
   .nav{max-height:250px;border-right:0;border-bottom:1px solid var(--border)}
   .stage{overflow:visible}
   .stage-inner{padding:14px}
   .stats{grid-template-columns:repeat(2,1fr)}
   .res-grid{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .top-actions{flex-wrap:nowrap}
+  .top-actions select.sel{flex:1 1 0;padding:7px 8px}
+  .top-actions .iconbtn:not(#btnNav){display:none}
 }
 body.nav-collapsed{--navw:0px}
 body.nav-collapsed .nav{display:none}
@@ -575,6 +591,9 @@ window.AILAB_V4 = {{
   document.querySelectorAll('.rail button[data-view]').forEach(function(b){b.onclick=function(){setView(b.dataset.view)}});
 
   document.getElementById('btnNav').onclick=function(){document.body.classList.toggle('nav-collapsed')};
+  if(window.matchMedia && window.matchMedia('(max-width:900px)').matches){
+    document.body.classList.add('nav-collapsed');
+  }
   document.getElementById('btnFocus').onclick=function(){document.body.classList.toggle('focus-mode')};
   document.getElementById('btnExpand').onclick=function(){document.querySelectorAll('.nav details').forEach(function(d){d.open=true})};
   document.getElementById('btnRandom').onclick=function(){
@@ -683,6 +702,7 @@ window.AILAB_V4 = {{
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='14' width='64' height='64' fill='%236366F1'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-size='38'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E"/>
 <meta name="description" content="AI Lab Free University v4 Portfolio — lifetime campus, stunning full-page guide, {n_links}+ resource links"/>
 <title>AI Lab Free University · v4 Portfolio Campus</title>
 <style>{CSS}</style>
@@ -792,6 +812,13 @@ window.AILAB_V4 = {{
               <li>🛡️ Permissions are perimeter · no secrets</li>
             </ul>
           </div>
+        </div>
+
+        <div class="panel-grid" aria-label="Next-level engineering runways">
+          <div class="panel"><h3>🌈 Migration runway</h3><p>{esc(ENGINEERING_RUNWAYS[0])}</p><p><strong>Compare:</strong> quality · latency · cost · safety · rollback.</p></div>
+          <div class="panel"><h3>🧲 Production RAG</h3><p>{esc(ENGINEERING_RUNWAYS[1])}</p><p><strong>Fail closed:</strong> empty evidence means no grounded answer.</p></div>
+          <div class="panel"><h3>🎙️ Voice bridge</h3><p>{esc(ENGINEERING_RUNWAYS[2])}</p><p><strong>Measure legs:</strong> never hide a slow stage inside one turn average.</p></div>
+          <div class="panel"><h3>🧪 Proof cadence</h3><p>Baseline → one variable → delta → decision → rollback. Review at 1h → 24h → 7d → 30d → 90d.</p></div>
         </div>
 
         <div class="filters">

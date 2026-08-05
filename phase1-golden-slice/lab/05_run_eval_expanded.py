@@ -71,6 +71,21 @@ def main() -> int:
     rtma.set_metric("pass_rate", round(rate, 4))
     rtma.set_metric("threshold", threshold)
     suite_pass = rate >= threshold
+    categories: dict[str, dict[str, int]] = {}
+    by_id = {item["id"]: item for item in items}
+    for row in rows:
+        category = by_id[row["id"]].get("category", "uncategorized")
+        bucket = categories.setdefault(category, {"passed": 0, "total": 0})
+        bucket["total"] += 1
+        bucket["passed"] += int(row["pass"])
+    rtma.set_metric("category_counts", categories)
+    rtma.set_decision(
+        baseline="golden-25 fixed suite",
+        changed_variable="candidate implementation",
+        observed_delta={"pass_rate": round(rate, 4), "categories": categories},
+        keep_or_revert="GREEN" if suite_pass else "RED",
+        rollback_trigger="threshold miss, safety miss, or unexplained category regression",
+    )
 
     report = [
         "# Golden-25 expanded report",
@@ -78,6 +93,7 @@ def main() -> int:
         f"- Passed: **{passed}/{total}** ({rate:.0%})",
         f"- Threshold: {threshold:.0%}",
         f"- Result: **{'GREEN' if suite_pass else 'RED'}**",
+        "- Review: **1h → 24h → 7d → 30d → 90d**",
         "",
     ]
     for r in rows:

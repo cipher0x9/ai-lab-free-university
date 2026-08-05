@@ -24,15 +24,33 @@ META = {
 
 
 def S(id_: str, school: str, title: str, level: str, body: str, tags: str = "", green: str = "", interview30: str = "") -> dict:
+    builder_extension = f"""
+
+### Builder lens · learn while building, prove as you go
+
+Explain **{title}** simply, build one bounded example, and capture the result with
+RTMA. Review at **1 hour → 24 hours → 7 days → 30 days → 90 days**.
+State the general rule, one exception, one worked example, and the falsifier.
+
+### 2026 production practice
+
+- Compare local and frontier routes on privacy, pass rate, p95, and verified-task cost.
+- Evaluate retrieval before generation and require resolvable citations or an honest no-answer.
+- Trace tool schemas, permissions, approvals, corrections, completion assertions, and stop reason.
+- Combine deterministic, calibrated model-graded, and human checks before release.
+- Force stale, empty, malformed, unauthorized, timeout, and rollback paths where relevant.
+- Pin every release-sensitive version and retain the last GREEN configuration.
+"""
     return {
         "id": id_,
         "school": school,
         "title": title,
         "level": level,
-        "body": body.strip(),
+        "body": body.strip() + builder_extension.rstrip(),
         "tags": tags,
         "green": green,
         "interview30": interview30,
+        "review_schedule": "1h, 24h, 7d, 30d, 90d",
     }
 
 

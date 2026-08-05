@@ -31,3 +31,26 @@ Wrong neighbors · stale index · citation theater · overstuffed context.
 ## Interview 30 / 90
 **30s:** Retrieve first, answer with citations, fail closed if empty.  
 **90s:** Pin embedder/chunker versions. Separate retrieval metrics. Domain corpora beat random scrapes for trust.
+
+## Production ladder and ablation
+
+```text
+keyword → chunks+embeddings → hybrid retrieval → reranking
+  → ACL/freshness filters → citation eval → monitored index
+```
+
+Run `lab/06_rag_ablation.py`, then vary chunk size, overlap, retriever, top-k, and
+reranker one at a time. Measure retrieval hit rate/recall@k before answer quality.
+Every chunk carries source id, location, version, policy, and timestamp. Every
+citation resolves. Empty or unauthorized evidence returns an honest no-answer.
+
+**Falsifier:** a polished answer with the wrong retrieved source is RED.
+
+## 2026 production-RAG practice
+
+- Version parser, chunker, embedder, index, reranker, corpus, and access policy together.
+- Compare lexical, dense, hybrid, and reranked retrieval on the same query set.
+- Track recall@k or hit rate before judging faithfulness, citation accuracy, and answer utility.
+- Exercise deleted, stale, conflicting, multilingual, and unauthorized evidence paths.
+- Observe ingestion lag, partial-index failures, cache staleness, and reindex rollback time.
+- Release only when every citation resolves and empty evidence produces a calibrated no-answer.

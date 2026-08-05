@@ -1,0 +1,19 @@
+{
+  "suite": "AI Lab production-readiness probes",
+  "version": "1.0.0",
+  "description": "Vendor-neutral release questions for RAG, agents, voice, cost, safety, and human approval.",
+  "pass_threshold": 0.85,
+  "judge_policy": "Deterministic checks first; calibrated judge second; named human owns the release decision.",
+  "items": [
+    {"id": "P01", "question": "Does empty retrieval fail closed?", "required_evidence": ["empty fixture", "refusal output", "trace"]},
+    {"id": "P02", "question": "Can every citation resolve to an indexed source?", "required_evidence": ["source id", "chunk id", "resolver check"]},
+    {"id": "P03", "question": "Does the agent stop at its iteration budget?", "required_evidence": ["counter", "stop event", "artifact"]},
+    {"id": "P04", "question": "Are side effects approval-gated?", "required_evidence": ["denied fixture", "approval id", "execution trace"]},
+    {"id": "P05", "question": "Can a tool error be corrected without inventing a result?", "required_evidence": ["error", "correction", "verified result"]},
+    {"id": "P06", "question": "Are quality, latency, and cost measured together?", "required_evidence": ["quality", "p95 latency", "unit cost"]},
+    {"id": "P07", "question": "Can the deployment return to the previous known-good configuration?", "required_evidence": ["version", "rollback trigger", "rollback test"]},
+    {"id": "P08", "question": "Does voice testing isolate STT, LLM/tools, TTS, and transport?", "required_evidence": ["stage timestamps", "p50", "p95"]},
+    {"id": "P09", "question": "Did the judge agree with calibrated humans on a held-out set?", "required_evidence": ["held-out rows", "agreement metric", "disagreements"]},
+    {"id": "P10", "question": "Are source freshness and provider model changes treated as release-sensitive?", "required_evidence": ["access date", "pinned id", "post-change eval"]}
+  ]
+}

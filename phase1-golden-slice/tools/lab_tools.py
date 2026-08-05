@@ -86,7 +86,25 @@ UC_AI_GLOSSARY = {
         "Session Initiation Protocol — signaling for VoIP sessions. "
         "Your UC superpower domain; later braid with Voice AI (STT/TTS)."
     ),
+    "reranker": (
+        "A second-stage scorer that reorders retrieved candidates. Compare retrieval quality, "
+        "latency, and cost on the same query set before keeping it."
+    ),
+    "agent loop": (
+        "Observe → validate → act → correct → verify under explicit turn, time, cost, "
+        "tool, and approval boundaries."
+    ),
+    "human approval": (
+        "A named person authorizes a specific external side effect; the approval id belongs in Trace."
+    ),
 }
+
+
+def approval_required(effect: str) -> bool:
+    """Default-deny classifier for side effects used in later teaching labs."""
+    normalized = effect.strip().lower().replace("_", " ")
+    side_effects = ("send", "post", "publish", "delete", "purchase", "trade", "deploy", "message")
+    return any(word in normalized for word in side_effects)
 
 
 def glossary_lookup(term: str) -> dict[str, Any]:

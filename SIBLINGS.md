@@ -17,3 +17,18 @@ Hub: https://linktr.ee/cyphermonkey
 ## Safety (both)
 
 Educational · MIT · no warranty · no secrets · lab safely · be kind
+
+## Shared next-level bridge
+
+The two campuses now share a single operator habit:
+
+```text
+UC path proof: Leg → ID → Counter → Capture
+AI build proof: Run → Trace → Metric → Artifact
+```
+
+Voice learners can transfer call-path isolation directly into the AI voice bridge:
+capture/transport, STT, model/tools, TTS, and human handoff become separately
+measured legs. AI learners can transfer eval discipline back into UC regression
+packs. Neither sibling overwrites or depends on the other; both remain free,
+offline-readable, and independently verifiable.

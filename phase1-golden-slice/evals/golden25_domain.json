@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Expanded general-audience suite (includes Phase-1 gold + domain operator items). Optional deeper bar.",
   "pass_threshold": 0.8,
+  "review_schedule": ["1h", "24h", "7d", "30d", "90d"],
+  "decision_fields": ["baseline", "changed_variable", "delta", "keep_or_revert", "rollback_trigger"],
+  "release_policy": "Threshold plus no unexplained critical-category regression.",
   "items": [
     {"id": "D01", "question": "What does RTMA stand for?", "required_keywords": ["run", "trace", "metric", "artifact"], "reference_answer": "Run Trace Metric Artifact", "category": "grammar"},
     {"id": "D02", "question": "What UC grammar maps to RTMA?", "required_keywords": ["licc"], "reference_answer": "LICC", "category": "uc-bridge"},

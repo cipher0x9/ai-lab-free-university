@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="night">
+<html lang="en" data-theme="aurora">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='14' width='64' height='64' fill='%236366F1'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-size='38'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E"/>
 <meta name="description" content="AI Lab Free University v1 Slice — offline Phase-1 pack. RTMA · local lab · tools · evals."/>
 <meta name="color-scheme" content="light dark"/>
 <title>AI Lab Free University v1 — Golden Slice</title>
@@ -53,6 +54,8 @@ input[type=search]{min-width:180px;flex:1;max-width:320px}
 .card.tool{border-top:3px solid var(--a2)}
 .card.eval{border-top:3px solid var(--a3)}
 .card.warn{border-top:3px solid var(--warn)}
+.card.next{border-left:4px solid #6366F1;background:linear-gradient(135deg,color-mix(in srgb,#6366F1 16%,var(--card)),color-mix(in srgb,#38BDF8 10%,var(--card)))}
+.card.proof{border-left:4px solid #F59E0B}.card.green{border-left:4px solid #22C55E}.card.explore{border-left:4px solid #8B5CF6}
 .section{margin:28px 0}
 .section h2{font-size:1.35rem;margin-bottom:8px;display:flex;align-items:center;gap:8px}
 .section h2 .dot{width:10px;height:10px;border-radius:50%;background:var(--a1);box-shadow:0 0 12px var(--a1)}
@@ -82,6 +85,7 @@ html[data-theme=warm] pre,html[data-theme=forest] pre{background:#1a1520;color:#
   .side{position:relative;top:0;height:auto;border-right:0;border-bottom:1px solid var(--border)}
   input[type=search]{max-width:none}
 }
+@media print{.section{break-inside:avoid;counter-increment:page}.section::after{content:"AI Lab · page " counter(page);display:block;margin-top:10px;color:#6366F1;font-size:10px}}
 </style>
 </head>
 <body>
@@ -109,6 +113,7 @@ html[data-theme=warm] pre,html[data-theme=forest] pre{background:#1a1520;color:#
     <a class="nav" href="#labs">Labs 01–03</a>
     <a class="nav" href="#eval">Golden-10 eval</a>
     <a class="nav" href="#green">GREEN checklist</a>
+    <a class="nav" href="#next-level">Next-level runway</a>
     <a class="nav" href="#safety">Safety</a>
     <a class="nav" href="#github">GitHub later</a>
     <h3>Open files</h3>
@@ -281,6 +286,28 @@ python3 lab/03_run_eval.py</pre>
       </div>
     </section>
 
+    <section class="section" id="next-level" data-search="next level migration rag agent eval voice review 90 days">
+      <h2><span class="dot" style="background:#6366F1;box-shadow:0 0 16px #38BDF8"></span> Next-level engineering runway</h2>
+      <p class="lead"><strong>Learn while building, prove as you go.</strong> Keep the 425-lesson map; add one implementation and one falsifier at a time.</p>
+      <div class="grid">
+        <div class="card next"><h3>🌈 Local → cloud</h3><p>Fixture → local model → provider adapter → same golden set. Compare quality, p50/p95, cost per passed task, privacy, and rollback.</p></div>
+        <div class="card explore"><h3>🧲 Production RAG</h3><p>Keyword → chunks/embeddings → hybrid → rerank → citations → empty-result eval. Score retrieval separately.</p></div>
+        <div class="card proof"><h3>🤖 Bounded agent</h3><p>Observe → validate → act → correct → verify. Hard caps for turns, time, cost, tools, and approvals.</p></div>
+        <div class="card green"><h3>🎙️ Voice bridge</h3><p>Capture/VAD → STT → LLM/tools → TTS → transport → human. Measure every leg.</p></div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Lab</th><th>Run</th><th>Metric</th><th>Falsifier</th></tr></thead>
+          <tbody>
+            <tr><td>06 · RAG ablation</td><td><code>python3 lab/06_rag_ablation.py</code></td><td>retrieval hit-rate delta</td><td>wrong source wins</td></tr>
+            <tr><td>07 · Agent loop</td><td><code>python3 lab/07_agent_loop.py</code></td><td>iterations + corrections</td><td>invented result / no stop</td></tr>
+            <tr><td>08 · Voice budget</td><td><code>python3 lab/08_voice_latency_budget.py</code></td><td>stage p50/p95</td><td>one average hides slow leg</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="lead" style="margin-top:14px">Review at <strong>1 hour → 24 hours → 7 days → 30 days → 90 days</strong>. Teach the rule, exception, worked example, and falsifier.</p>
+    </section>
+
     <section class="section" id="github" data-search="github release publish linktree ai-lab-free-university">
       <h2><span class="dot" style="background:var(--a2)"></span> GitHub later (not yet)</h2>
       <p class="lead">Public repo when the slice is solid: <strong>ai-lab-free-university</strong> · account CYPHER0X9.</p>
@@ -305,7 +332,7 @@ python3 lab/03_run_eval.py</pre>
   const THEME_KEY='ailab-theme-v1';
   const GREEN_KEY='ailab-green-v1';
   const themeEl=document.getElementById('theme');
-  const saved=localStorage.getItem(THEME_KEY)||'night';
+  const saved=localStorage.getItem(THEME_KEY)||'aurora';
   document.documentElement.setAttribute('data-theme',saved);
   themeEl.value=saved;
   themeEl.addEventListener('change',()=>{
@@ -327,6 +354,10 @@ python3 lab/03_run_eval.py</pre>
     'I know what never goes in git',
     'I can map LICC → RTMA in one sentence',
     'I will not delete the UC free pack for this project'
+    ,'I ran the RAG ablation and inspected the wrong-neighbor risk'
+    ,'I saw the bounded agent fail, correct, verify, and stop'
+    ,'I can isolate voice STT, model/tools, TTS, and transport latency'
+    ,'I scheduled reviews at 1h, 24h, 7d, 30d, and 90d'
   ];
   const box=document.getElementById('checks');
   let state={};

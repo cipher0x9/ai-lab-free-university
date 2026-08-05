@@ -93,6 +93,23 @@ def main() -> int:
     rtma.set_metric("pass_rate", round(rate, 4))
     rtma.set_metric("threshold", threshold)
     suite_pass = rate >= threshold
+    category_totals: dict[str, int] = {}
+    category_passed: dict[str, int] = {}
+    for row in rows:
+        category = row.get("category") or "uncategorized"
+        category_totals[category] = category_totals.get(category, 0) + 1
+        category_passed[category] = category_passed.get(category, 0) + int(row["pass"])
+    rtma.set_metric(
+        "category_pass_rate",
+        {category: round(category_passed[category] / total_in_category, 4) for category, total_in_category in category_totals.items()},
+    )
+    rtma.set_decision(
+        baseline="fixed golden-10 reference",
+        changed_variable="candidate answer path",
+        observed_delta={"pass_rate": round(rate, 4), "threshold": threshold},
+        keep_or_revert="GREEN" if suite_pass else "RED",
+        rollback_trigger="pass rate below threshold or any critical safety miss",
+    )
 
     # Tiny tool sanity (shows eval + tools coexist)
     c = calc("12*(3+4)/2")
@@ -123,6 +140,7 @@ def main() -> int:
         "",
         "## Next",
         "Open `GREEN-CHECKLIST.md` and mark only what you can explain without notes.",
+        "Review failed concepts at 1h, 24h, 7d, 30d, and 90d.",
     ]
     report_path = write_report("golden10-report.md", "\n".join(report_lines))
     detail_path = write_report(

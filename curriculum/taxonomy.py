@@ -16,6 +16,36 @@ RTMA = Run · Trace · Metric · Artifact (required on every lab-grade lesson).
 
 from __future__ import annotations
 
+PRACTICE_DEPTH_2026 = {
+    "D00": "Define the learner, task, data boundary, success check, stop budget, and human-only action before choosing a model.",
+    "D01": "Contract-test schemas, retries, idempotency, fixtures, and observability before adding probabilistic behavior.",
+    "D02": "Evaluate multilingual meaning, typography, tokenization, and cultural context with native-speaker review where risk matters.",
+    "D03": "Trace tokenization, context assembly, uncertainty, and model failure separately from product and policy failures.",
+    "D04": "Version datasets, record consent and lineage, test leakage and bias, and keep synthetic data labeled as synthetic.",
+    "D05": "Benchmark local models by task pass rate, warm/cold p95, memory pressure, privacy boundary, and cost per verified task.",
+    "D06": "Keep providers behind adapters; pin versions and compare quality, latency, cost, safety, fallback, and retention policy.",
+    "D07": "Version prompts, schemas, examples, and trust boundaries independently; release only through the same regression suite.",
+    "D08": "Version parser through index; evaluate hybrid retrieval and reranking before generation, citations, and empty-result behavior.",
+    "D09": "Persist agent state, typed tools, approval ids, budgets, corrections, assertions, cancellation, replay, and stop reason.",
+    "D10": "Build memory with consent, provenance, expiry, deletion, conflict resolution, and a test for what must never be remembered.",
+    "D11": "Combine deterministic, calibrated model-graded, and human evals; slice failures and connect every incident to regression coverage.",
+    "D12": "Measure multimodal and voice quality plus p50/p95 per stage; test ambiguity, interruption, consent, and human handoff.",
+    "D13": "Correlate traces across model, retrieval, tools, approvals, cost, and artifacts while redacting sensitive payloads.",
+    "D14": "Use canaries, shadow traffic, bounded autonomy, secrets controls, supply-chain evidence, and rehearsed rollback.",
+    "D15": "Treat robotics and physical AI as safety-critical control: simulate first, constrain action space, and preserve a human stop.",
+    "D16": "Route model and system changes through measurable product outcomes, accessibility, risk ownership, and total operating cost.",
+    "D17": "Separate scenario from certainty; study quantum/AI, governance, and frontier research through primary evidence and falsifiable claims.",
+}
+
+UNIVERSAL_PRACTICE_CHECKS_2026 = [
+    "Hold the task and evaluator constant while changing one system variable.",
+    "Record quality, p95 latency, cost per verified task, and one safety signal.",
+    "Force an empty, malformed, unauthorized, stale, or timeout path as appropriate.",
+    "Preserve model, prompt, data, tool, and policy versions in the trace.",
+    "Keep a human owner and approval artifact for material side effects.",
+    "Retain the last GREEN configuration and prove the rollback path.",
+]
+
 # Division → chapters → lesson seeds (title, level, focus tags, body_kind)
 # body_kind drives generator templates for consistent mentor quality.
 
@@ -656,3 +686,25 @@ VENDOR_NOTES = {
     "xAI": "Grok API and agent tooling in the xAI stack — treat like any production vendor.",
     "Local open-weight": "Ollama/llama.cpp/MLX — privacy and offline; capability varies by size.",
 }
+
+# Next-level internal curriculum grammar. These labels are implementation aids,
+# not decorative public copy: teach the invariant, isolate exceptions, derive a
+# working case, then try to disprove it with evidence.
+PEDAGOGY_GRAMMAR = {
+    "general_rule": "Teach the vendor-neutral mechanism first.",
+    "exception": "Name where the rule fails or a provider differs.",
+    "derivation": "Walk one input through every state transition.",
+    "reason_check": "Reject reasons that have no observable support.",
+    "ontology_map": "Separate object, property, relation, event, and evidence.",
+    "stack_map": "Move from data and compute through model, context, tools, product, and governance.",
+}
+
+MIGRATION_LADDERS = {
+    "local_to_cloud": ["deterministic fixture", "local model", "provider adapter", "cloud canary", "routed production"],
+    "prompt_system": ["instruction", "template", "structured contract", "versioned suite", "release gate"],
+    "rag": ["keyword", "dense retrieval", "hybrid", "reranking", "citation eval", "production monitoring"],
+    "agent": ["single tool", "bounded loop", "approval gates", "trace", "eval", "rollback"],
+    "voice": ["text", "STT", "LLM/tools", "TTS", "latency budget", "human handoff"],
+}
+
+REVIEW_SCHEDULE = ("1h", "24h", "7d", "30d", "90d")
