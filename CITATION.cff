@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: If you use this free university campus, please cite it.
+title: "AI Lab Free University"
+authors:
+  - name: "CYPHER0X9"
+    alias: cipher0x9
+repository-code: "https://github.com/cipher0x9/ai-lab-free-university"
+url: "https://github.com/cipher0x9/ai-lab-free-university"
+license: MIT
+date-released: "2026-08-01"
+abstract: >
+  Free offline AI university campus with RTMA proof grammar, 425 lessons, and zero-key Python labs.
+keywords:
+  - education
+  - free-learning
+  - offline

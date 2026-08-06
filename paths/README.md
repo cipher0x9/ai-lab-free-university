@@ -1,40 +1,51 @@
-# Study paths (general audience)
+# Learning paths — AI Lab Free University
 
-Open the same paths inside `university/v2-UNIVERSITY.html` (school **PX**).
+## Path 0 — Open the campus (day 0)
 
-## Path A — Absolute beginner (4 evenings)
+1. Download v4 portfolio zip or clone  
+2. Open `university/v4-PORTFOLIO.html`  
+3. Skim RTMA card  
 
-Orientation → RTMA → Mental models → `verify_slice.sh` → Glossary → GREEN.
+## Path 1 — Zero-key builder (week 1)
 
-## Path B — Domain expert new to AI (1–2 weeks)
+```bash
+cd phase1-golden-slice
+python3 lab/01_local_hello.py
+python3 lab/02_tool_call.py
+python3 lab/03_run_eval.py
+python3 lab/04_rtma_quiz.py
+bash ../scripts/verify_slice.sh
+```
 
-RTMA mapped to your incident grammar → golden slice cold → Mental models + Local lab → Agents → Evals → domain braid skim → personal safety policy.
+## Path 2 — Mental models → RAG → agents
 
-## Path C — Software engineer adding AI
+1. schools/00–06  
+2. `curriculum/RAG-SYSTEMS-DEEP.md`  
+3. `curriculum/AGENT-ARCHITECTURE.md`  
+4. labs 06–07  
 
-Golden slice + read lab source → Prompts + structured output → Agent permissions → Evals as CI idea → Cloud cost sheet → Ship a tiny internal pack.
+## Path 3 — Production discipline
 
-## Path D — Student / career switch (steady)
+1. `EVAL-AND-OBSERVABILITY.md` · `AGENT-EVALS-ADVANCED.md`  
+2. `AI-SECURITY-SAFETY.md` · `MLOPS-AND-PRODUCTION.md`  
+3. `COST-LATENCY-ENGINEERING.md` · `STRUCTURED-OUTPUTS-AND-CONTRACTS.md`  
 
-3×/week: concepts · lab/RTMA · interview out loud. Portfolio = scrubbed artifacts + contributions.
+## Path 4 — Local + privacy first
 
-## Path E — Voice / UC specialist
+1. `LOCAL-LLM-OPS.md`  
+2. `CONTEXT-ENGINEERING.md` · `DATA-FOR-AI-SYSTEMS.md`  
+3. Attach Ollama only after fixtures pass  
 
-RTMA handbook fully → golden slice → 01/02/06/08 → School 07 → plan UC corpus RAG → keep [UC free pack](https://github.com/cipher0x9/uc-lab-free-university) installed as sibling.
+## Path 5 — Voice AI (UC bridge)
 
-## Rule
+1. `VOICE-AI-PRODUCTION.md` · lab 08  
+2. Sibling UC Lab LICC packs  
+3. Joint ticket: Call-ID + run_id  
 
-Do not claim mastery of later schools without Phase 1 GREEN evidence.
+## Path 6 — Career / interviews
 
-## 90-day engineering overlays
+1. `AI-ENGINEERING-INTERVIEWS.md`  
+2. `AI-CAREER-2026.md`  
+3. Ship a public RTMA portfolio folder (redacted)
 
-| Overlay | Add after your base path | Portfolio proof |
-|---|---|---|
-| Local → cloud | adapter contract + same golden set | quality/latency/cost scorecard |
-| RAG | Lab 06 + 20 citation questions | ablation + empty-result trace |
-| Agent | Lab 07 + one read-only domain tool | correction + hard-stop trace |
-| Voice | Lab 08 + consented audio fixture | stage p50/p95 + handoff drill |
-| Safety | production-readiness probes | denied actions + rollback test |
-
-Whichever path you choose, review hard ideas at 1h, 24h, 7d, 30d, and 90d.
-The destination is a stranger-runnable capstone, not a completion percentage.
+Spaced review: 1h → 24h → 7d → 30d → 90d.

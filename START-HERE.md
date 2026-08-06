@@ -105,3 +105,10 @@ Your next milestone is not “used an AI tool.” It is: **I can frame a task,
 choose a local or frontier model for a reason, connect only the tools it needs,
 evaluate the result, explain the failure modes, and hand the proof to another
 person.** That capability survives model releases, job titles, and geography.
+
+## Also
+
+- [docs/FAQ.md](./docs/FAQ.md)
+- [curriculum/README.md](./curriculum/README.md)
+- [SIBLINGS.md](./SIBLINGS.md)
+- [CHANGELOG.md](./CHANGELOG.md)

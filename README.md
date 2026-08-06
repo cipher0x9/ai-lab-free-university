@@ -71,8 +71,8 @@ I got tired of feeling lost between tools, jokes I did not understand, and advic
 
 So I built a free campus for people like me: curious, practical, evidence-first — not gatekept.
 
-Sibling voice pack (already free):  
-🌿 **[UC Lab Free University](https://github.com/cipher0x9/uc-lab-free-university)**
+Sibling free campuses:  
+🌿 **[UC Lab Free University](https://github.com/cipher0x9/uc-lab-free-university)** · 🕉️ **[Ardham Shastra](https://github.com/cipher0x9/ardham-shastra)**
 
 If this helps even one person walk from confusion to calm practice, it was worth sharing.
 
@@ -157,7 +157,7 @@ Never commit API keys, customer data, or private chats
 No autonomous email/post without a human  
 Lab safely · pin official docs for production  
 
-**[HOW-TO-GET.md](./HOW-TO-GET.md)** · **[START-HERE.md](./START-HERE.md)** · **[SIBLINGS.md](./SIBLINGS.md)** · **[SECURITY.md](./SECURITY.md)**
+**[HOW-TO-GET.md](./HOW-TO-GET.md)** · **[START-HERE.md](./START-HERE.md)** · **[docs/FAQ.md](./docs/FAQ.md)** · **[CHANGELOG.md](./CHANGELOG.md)** · **[SIBLINGS.md](./SIBLINGS.md)** · **[SECURITY.md](./SECURITY.md)**
 
 ---
 

@@ -67,11 +67,19 @@ def parse_before_sizes(path: Path) -> dict[str, int]:
     return sizes
 
 
+def strip_code(text: str) -> str:
+    """Remove fenced and inline code so Python/JS index syntax is not parsed as MD links."""
+    text = re.sub(r"```[\s\S]*?```", "", text)
+    text = re.sub(r"`[^`\n]+`", "", text)
+    return text
+
+
 def local_link_errors(path: Path, text: str) -> list[str]:
     errors = []
+    text = strip_code(text)
     for target in re.findall(r"\[[^\]]*\]\(([^)]+)\)", text):
         target = target.strip().strip("<>")
-        if not target or target.startswith(("http://", "https://", "mailto:", "#")):
+        if not target or target.startswith(("http://", "https://", "mailto:", "#", "file:")):
             continue
         clean = unquote(target.split("#", 1)[0].split("?", 1)[0])
         if clean and not (path.parent / clean).resolve().exists():

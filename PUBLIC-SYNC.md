@@ -1,17 +1,10 @@
-# Public sync stamp
+# Public sync
 
-**Last full public sync:** 2026-08-01 06:07 UTC  
-**Campus:** v4.1-mobile · mobile layout · offline-safe fonts  
-**Release:** https://github.com/cipher0x9/ai-lab-free-university/releases/tag/v4.1-mobile  
+**Campus:** v4.1-mobile · 425 lessons · Aurora portfolio  
+**Curriculum packs:** 25 deep markdown modules  
+**Labs:** phase1-golden-slice (zero-key)  
+**Last god-mode polish:** 2026-08-06  
+**License:** MIT (see LICENSE + NOTICE.md)  
+**FAQ:** docs/FAQ.md  
 
-This file exists so visitors can see the pack was refreshed on GitHub.
-
-## Local next-level candidate
-
-The working tree contains an additive next-level engineering transformation:
-425 enriched lessons, three new zero-key proof labs, production-readiness probes,
-and an expanded offline campus. This is **not a public-sync claim** until a future
-human-approved release is published and this stamp is updated with its exact tag.
-
-Candidate verification: `bash scripts/verify_slice.sh`
-Release gate: local GREEN → offline browser check → human approval → publish → read-back.
+Verify: `python3 scripts/verify_repo.py` · `bash scripts/verify_slice.sh`
