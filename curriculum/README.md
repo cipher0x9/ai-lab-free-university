@@ -61,7 +61,7 @@ ML foundations → LLM systems → RAG/agents → evals/safety → ops → caree
 ## Siblings
 
 - 🌿 [UC Lab Free University](https://github.com/cipher0x9/uc-lab-free-university)  
-- 🕉️ [Ardham Shastra](https://github.com/cipher0x9/ardham-shastra)  
+- 🎓 [Ardham Shastra](https://github.com/cipher0x9/ardham-shastra)  
 
 FAQ: [../docs/FAQ.md](../docs/FAQ.md) · Field guide: [../NEXT-LEVEL-ENGINEERING.md](../NEXT-LEVEL-ENGINEERING.md)
 
